@@ -120,6 +120,9 @@ Since this script supports both **ESX** and **QBCore**, the SQL file includes en
 <summary>Database for esx</summary>
 
 ```sql
+DROP TABLE IF EXISTS `crafting_queue`;
+DROP TABLE IF EXISTS `crafting_tables`;
+
 CREATE TABLE IF NOT EXISTS `crafting_queue` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`owner` VARCHAR(80) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
@@ -132,11 +135,7 @@ CREATE TABLE IF NOT EXISTS `crafting_queue` (
 	PRIMARY KEY (`id`) USING BTREE,
 	INDEX `owner_tableId` (`owner`, `tableId`) USING BTREE
 )
-COLLATE='utf8mb3_general_ci'
-ENGINE=InnoDB
-;
-
-
+COLLATE='utf8mb3_general_ci';
 
 CREATE TABLE IF NOT EXISTS `crafting_tables` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -145,15 +144,16 @@ CREATE TABLE IF NOT EXISTS `crafting_tables` (
 	`size` SMALLINT(6) NOT NULL DEFAULT '0',
 	`job` VARCHAR(30) NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
 	`grades` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`gang` VARCHAR(30) NULL DEFAULT NULL,
+	`gangGrades` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
 	`object` VARCHAR(50) NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
 	`coords` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
 	`recipes` LONGTEXT NOT NULL COLLATE 'utf8mb4_bin',
 	`blip` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`global` TINYINT(1) NULL DEFAULT NULL,
 	PRIMARY KEY (`id`) USING BTREE
 )
-COLLATE='utf8mb3_general_ci'
-ENGINE=InnoDB
-;
+COLLATE='utf8mb3_general_ci';
 
 ALTER TABLE `users` ADD IF NOT EXISTS `crafting_skill` LONGTEXT NULL DEFAULT NULL;
 ```
@@ -165,6 +165,9 @@ ALTER TABLE `users` ADD IF NOT EXISTS `crafting_skill` LONGTEXT NULL DEFAULT NUL
 <summary>Database for qbcore</summary>
 
 ```sql
+DROP TABLE IF EXISTS `crafting_queue`;
+DROP TABLE IF EXISTS `crafting_tables`;
+
 CREATE TABLE IF NOT EXISTS `crafting_queue` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`owner` VARCHAR(80) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
@@ -177,9 +180,7 @@ CREATE TABLE IF NOT EXISTS `crafting_queue` (
 	PRIMARY KEY (`id`) USING BTREE,
 	INDEX `owner_tableId` (`owner`, `tableId`) USING BTREE
 )
-COLLATE='utf8mb3_general_ci'
-ENGINE=InnoDB
-;
+COLLATE='utf8mb3_general_ci';
 
 CREATE TABLE IF NOT EXISTS `crafting_tables` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -188,15 +189,16 @@ CREATE TABLE IF NOT EXISTS `crafting_tables` (
 	`size` SMALLINT(6) NOT NULL DEFAULT '0',
 	`job` VARCHAR(30) NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
 	`grades` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`gang` VARCHAR(30) NULL DEFAULT NULL,
+	`gangGrades` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
 	`object` VARCHAR(50) NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
 	`coords` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
 	`recipes` LONGTEXT NOT NULL COLLATE 'utf8mb4_bin',
 	`blip` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`global` TINYINT(1) NULL DEFAULT NULL,
 	PRIMARY KEY (`id`) USING BTREE
 )
-COLLATE='utf8mb3_general_ci'
-ENGINE=InnoDB
-;
+COLLATE='utf8mb3_general_ci';
 
 
 ALTER TABLE `players` ADD IF NOT EXISTS `crafting_skill` LONGTEXT NULL DEFAULT NULL;
