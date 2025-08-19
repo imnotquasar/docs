@@ -839,6 +839,7 @@ CREATE TABLE `phone_backups` (
     `owner` VARCHAR(120) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci',
     PRIMARY KEY (`id`) USING BTREE
 ) COLLATE = 'utf8mb4_unicode_ci' ENGINE = InnoDB AUTO_INCREMENT = 17;
+
 ```
 
 </details>
@@ -1566,6 +1567,7 @@ CREATE TABLE `phone_backups` (
     `owner` VARCHAR(120) NOT NULL DEFAULT '' COLLATE 'utf8mb4_unicode_ci',
     PRIMARY KEY (`id`) USING BTREE
 ) COLLATE = 'utf8mb4_unicode_ci' ENGINE = InnoDB AUTO_INCREMENT = 17;
+
 ```
 
 </details>
