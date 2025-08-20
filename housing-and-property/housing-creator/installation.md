@@ -169,34 +169,32 @@ VALUES
 
 CREATE TABLE IF NOT EXISTS `houselocations` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(255) NOT NULL DEFAULT '' COLLATE 'latin1_swedish_ci',
-	`label` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`coords` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`name` VARCHAR(255) NOT NULL DEFAULT '',
+	`label` VARCHAR(255) NULL DEFAULT NULL,
+	`coords` TEXT NULL DEFAULT NULL,
 	`owned` TINYINT(2) NULL DEFAULT NULL,
 	`price` INT(11) NULL DEFAULT NULL,
 	`defaultPrice` INT(11) NULL DEFAULT NULL,
 	`tier` TINYINT(2) NULL DEFAULT NULL,
-	`garage` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`garageShell` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`creator` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`mlo` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`ipl` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`garage` TEXT NULL DEFAULT NULL,
+	`garageShell` TEXT NULL DEFAULT NULL,
+	`creator` VARCHAR(50) NULL DEFAULT NULL,
+	`mlo` TEXT NULL DEFAULT NULL,
+	`ipl` TEXT NULL DEFAULT NULL,
 	`console` INT(11) NULL DEFAULT NULL,
-	`board` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`board` TEXT NULL DEFAULT NULL,
 	`for_sale` INT(11) NULL DEFAULT '1',
-	`extra_imgs` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`description` TEXT NOT NULL DEFAULT '' COLLATE 'latin1_swedish_ci',
-	`creatorJob` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`blip` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
-	`upgrades` TEXT NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`extra_imgs` TEXT NULL DEFAULT NULL,
+	`description` TEXT NOT NULL DEFAULT '',
+	`creatorJob` VARCHAR(50) NULL DEFAULT NULL,
+	`blip` TEXT NULL DEFAULT NULL,
+	`upgrades` TEXT NULL DEFAULT NULL,
 	`apartmentCount` INT(11) NULL DEFAULT NULL,
 	PRIMARY KEY (`name`) USING BTREE,
 	INDEX `name` (`name`) USING BTREE,
 	INDEX `id` (`id`) USING BTREE
 )
-COLLATE='latin1_swedish_ci'
-ENGINE=InnoDB
-AUTO_INCREMENT=1
+COLLATE='utf8mb4_unicode_ci'
 ;
 
 CREATE TABLE IF NOT EXISTS `player_houses` (
@@ -332,7 +330,6 @@ COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=1
 ;
-
 ```
 
 </details>
