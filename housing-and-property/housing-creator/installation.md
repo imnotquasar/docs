@@ -167,6 +167,22 @@ INSERT IGNORE INTO
 VALUES
     ('propery', 'Property', 0);
 
+INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
+('realestate', 'Real Estate Agency', 1);
+
+
+INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`) VALUES
+('realestate', 0, 'agent', 'Agent', 400),
+('realestate', 1, 'senior_agent', 'Senior Agent', 600),
+('realestate', 2, 'manager', 'Manager', 800),
+('realestate', 3, 'boss', 'Boss', 1000);
+
+INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
+('society_realestate', 'Real Estate Society', 1);
+
+INSERT INTO `addon_account_data` (`account_name`, `money`) VALUES
+('society_realestate', 0);
+
 CREATE TABLE IF NOT EXISTS `houselocations` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(255) NOT NULL DEFAULT '',
@@ -330,6 +346,7 @@ COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=1
 ;
+
 ```
 
 </details>
