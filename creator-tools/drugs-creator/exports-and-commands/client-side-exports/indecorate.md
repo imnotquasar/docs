@@ -1,16 +1,36 @@
-# inDecorate
+# isDead (dead state)
 
-The `inDecorate` export allows you to check if a player is currently in decoration mode. This is useful for managing or restricting specific actions while decoration mode is active.
+The `LocalPlayer.state.dead` property allows you to check if the local player is currently dead. This is useful for restricting actions, disabling menus, or triggering custom logic when the player has died.
 
 ***
 
 ## How to Use
 
-To check whether the player is in decoration mode, use the following code:
+To check whether the player is dead, use the following code:
 
 ```lua
-local inDecorate = exports['qs-drugs-creator']:inDecorate()
-print("Is the player in decoration mode? " .. tostring(inDecorate))
+local isDead = LocalPlayer.state.dead
+print("Is the player dead? " .. tostring(isDead))
 ```
 
-This will return a boolean value (`true` or `false`) indicating whether the player is in decoration mode. You can then use this information to implement custom logic, such as blocking certain actions or triggering events during decoration.
+This will return one of the following values:
+
+* `"dead"` → The player is dead.
+* `"lastStand"` → The player is in last stand mode (downed, not fully dead).
+* `nil` → The player is alive.
+
+You can then use this information to implement conditions.
+
+***
+
+## **Example**
+
+```lua
+if LocalPlayer.state.dead == "dead" then
+    print("The player is completely dead, block actions here.")
+elseif LocalPlayer.state.dead == "lastStand" then
+    print("The player is in last stand mode, maybe allow help.")
+else
+    print("The player is alive and can interact normally.")
+end
+```
