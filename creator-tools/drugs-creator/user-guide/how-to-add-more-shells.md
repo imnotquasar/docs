@@ -1,37 +1,63 @@
-# Bandage healing system
+# How to add more shells
 
-The **Bandage system** lets players use bandages to heal themselves and optionally stop bleeding without EMS intervention. This gives roleplay flexibility for minor injuries while keeping serious trauma under medical control.
+Quasar Drugs Creator supports adding additional shells to expand your property options. While the package includes basic k4mb1 shells, you can enhance your collection by acquiring new shells from the [K4MB1 Shells Store. ](https://www.k4mb1maps.com)Follow this guide to integrate new shells properly.
+
+{% stepper %}
+{% step %}
+### Acquire Shells
+
+Purchase or obtain shells from a trusted source like k4mb1.
+{% endstep %}
+
+{% step %}
+### **Configure Shells**:
+
+Use the `Config.Shells` table in the configuration file to define the properties, and storage settings of each shell.
+{% endstep %}
+
+{% step %}
+### Images for Realtors
+
+Ensure you include relevant preview images to enhance the realtor UI (for future DLC)
+{% endstep %}
+{% endstepper %}
 
 ***
 
-## How It Works
+## Example Configuration
 
-Bandages are configured as follows:
+Here’s how to configure new shells in `Config.Shells`:
 
 ```lua
-Config.BandageItem = {
-    enable = true,          -- Enable bandage usage
-    item = 'bandage',       -- The item name in your inventory
-    regeneration = 50,      -- % of health restored
-    healBleed = false,      -- Stop bleeding? (true = yes, false = no)
-    duration = 7 * 1000     -- Time required to apply bandage (7 seconds)
+Config.Shells = {
+    [1] = {
+        model = 'shell_coke1',
+        limits = {
+            weed = 10,
+            meth = 10,
+            cocaine = 10,
+            money = 10
+        },
+        stash = {
+            maxweight = 1000000,
+            slots = 5,
+        }
+
+    },
+    [2] = {
+        model = 'shell_weed',
+        limits = {
+            weed = 10,
+            meth = 10,
+            cocaine = 10,
+            money = 10
+        },
+        stash = {
+            maxweight = 1000000,
+            slots = 5,
+        }
+
+    }
+    -- Other shells
 }
 ```
-
-* **Enable** → Activates or deactivates the bandage system.
-* **Item** → Defines which inventory item will act as a bandage.
-* **Regeneration** → Amount of health restored (percentage).
-* **HealBleed** → Determines if a bandage can **stop bleeding**. If `false`, only EMS can treat bleeding wounds.
-* **Duration** → How long the player must wait while applying the bandage.
-
-***
-
-## Example Use Case
-
-* A player lightly injured in a fight can use a **bandage** to restore up to **50% health**.
-* If **HealBleed = true**, it will also stop bleeding (for example, from a gunshot wound).
-* If **HealBleed = false**, the bandage restores health but does not stop bleeding — the player must still see a medic.
-
-{% hint style="warning" %}
-For balance, it’s recommended to keep **HealBleed = false**, so EMS still plays a critical role in treating serious injuries.
-{% endhint %}

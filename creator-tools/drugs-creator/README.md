@@ -1,9 +1,10 @@
-# Hospital Creator
+# Drugs Creator
 
-**Quasar Hospital Creator** is a **fully advanced ambulance and medical system** that allows you to **build custom hospitals**, manage detailed treatments, and provide an **immersive healthcare roleplay experience**. From **diagnosing injuries** to deploying **mobile medical bags**, every interaction includes **realistic animations** and **unique healing mechanics**, with some parts being _NoPixel Inspired_.
+Quasar Drugs Creator is an advanced system designed to revolutionize the way drugs are handled in FiveM Roleplay servers. This resource allows you to create fully customizable drugs with unique hallucinogenic effects, offering an immersive and dynamic experience for players.
 
-The resource **auto-detects your framework** and targeting setup, meaning **no manual configuration** is needed. With **multi-language support (25+ languages)**, it’s prepared for **global deployment from day one**.
+With Quasar Drugs Creator, server owners can establish specific drug farming zones, enabling players to gather raw materials in interactive environments. These materials can then be processed in drug laboratories, which are purchasable by players. These labs are fully customizable, allowing players to decorate and organize them as they see fit, and strategically place processing spots for maximum efficiency.
 
-Players can engage in a **configurable body-part healing system**, perform **emergency rescues**, and operate with **cooperative EMS missions**. **Hospitals can be created and customized directly in-game**, while **portable medic bags** ensure treatment anywhere in the city. A **fully functional chain of healing, billing, and hospital management** makes this script both **immersive and profitable** — bringing **long-term progression, teamwork, and realism** to your server’s RP.
+The system also provides the ability to create drug buyers as the final step in the production chain, creating a realistic and engaging economy. With its robust customization options and immersive features, Quasar Drugs Creator brings a fresh level of depth and realism to the drug-related gameplay experience.
 
-{% embed url="https://www.youtube.com/watch?v=q6mTVWmE4Z0" %}
+{% embed url="https://www.youtube.com/watch?v=6T93cDMm8t4" %}
+

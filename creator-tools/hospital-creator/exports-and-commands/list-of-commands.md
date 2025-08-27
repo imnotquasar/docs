@@ -2,7 +2,7 @@
 
 Each command has its explanation on the right side, if any command does not work, you can check if you used its syntax correctly, you can later claim it in a ticket.
 
-<table><thead><tr><th width="342">Command</th><th>Description</th></tr></thead><tbody><tr><td>/drugscreator</td><td>Command to open the creation menu.</td></tr><tr><td>/labMenu</td><td>Command to open a lab menu.</td></tr><tr><td>/labDeco</td><td>Command to open the decorative menu quickly.</td></tr></tbody></table>
+<table><thead><tr><th width="264">Command</th><th>Description</th></tr></thead><tbody><tr><td>/hospital_creator</td><td>Command to open the creation menu.</td></tr><tr><td>/ambulance</td><td>Command to open the doctors radial menu.</td></tr><tr><td>/revive [id]</td><td>Command to revive players, must give the id.</td></tr></tbody></table>
 
 ***
 

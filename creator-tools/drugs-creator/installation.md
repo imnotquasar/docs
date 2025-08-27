@@ -46,12 +46,6 @@ When downloading a dependency, ensure the file is properly unzipped and does not
 
 {% embed url="https://github.com/overextended/oxmysql/releases" %}
 {% endstep %}
-
-{% step %}
-### hospital\_map (default hospital)
-
-{% embed url="https://github.com/qbcore-framework/hospital_map" %}
-{% endstep %}
 {% endstepper %}
 
 <figure><img src="../../.gitbook/assets/ezgif-5-ee6f842765 (1).gif" alt=""><figcaption></figcaption></figure>
@@ -99,9 +93,7 @@ You can see the complete guide to update your server here:
 
 ## Server.cfg Positioning
 
-To ensure \[hospital] works properly, always start your framework (e.g., ESX, QBCore) first, followed by your inventory system (e.g., qs-inventory, ox\_inventory) and your shops system (e.g., qs-advancedshops, ox\_inventory).&#x20;
-
-Finally, start \[hospital], making sure all dependencies are already running beforehand.
+To ensure Quasar Drugs Creator works properly, start your framework (e.g., ESX, QBCore) first, followed by your inventory system (e.g., qs-inventory, ox\_inventory). Finally, start Quasar Drugs Creator, ensuring all dependencies are running beforehand.
 
 <figure><img src="../../.gitbook/assets/ezgif-7-18d691812a.gif" alt=""><figcaption></figcaption></figure>
 
@@ -122,25 +114,93 @@ As there are multiple housing systems in the market, and frameworks like QBCore 
 <summary>Database for esx</summary>
 
 ```sql
-ALTER TABLE `users` ADD IF NOT EXISTS `ems_duty` LONGTEXT NULL DEFAULT NULL;
+ALTER TABLE
+    `users`
+ADD
+    IF NOT EXISTS `inside_lab` VARCHAR(50) NULL DEFAULT NULL;
 
-CREATE TABLE IF NOT EXISTS `hospitals` (
+DROP TABLE IF EXISTS `drug_farm`;
+
+CREATE TABLE `drug_farm` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`creator` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
-	`zone` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`respawnPoint` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`blip` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`duty` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`stash` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`boss` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`checkIn` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`wardrobe` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`shop` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`garage` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
-	PRIMARY KEY (`id`) USING BTREE
+	`name` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(80) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`type` VARCHAR(50) NOT NULL DEFAULT '' COLLATE 'utf8mb3_general_ci',
+	`zone` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`maxCollectionCount` INT(11) NOT NULL DEFAULT '5',
+	`blip` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `name` (`name`) USING BTREE
 )
 COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+DROP TABLE IF EXISTS `drug_labs`;
+
+CREATE TABLE `drug_labs` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`owner` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`stash` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`wardrobe` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`shell` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`blip` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`price` INT(11) NULL DEFAULT '500',
+	`holders` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`locked` TINYINT(2) NULL DEFAULT '0',
+	`level` INT(11) NULL DEFAULT '1',
+	`progress` INT(11) NULL DEFAULT '0',
+	`public` TINYINT(1) NULL DEFAULT '0',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `name` (`name`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+
+
+DROP TABLE IF EXISTS `drug_lab_decorations`;
+
+CREATE TABLE `drug_lab_decorations` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`lab` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(70) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`modelName` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`coords` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`rotation` TEXT NOT NULL DEFAULT '' COLLATE 'utf8mb3_general_ci',
+	`inStash` TINYINT(1) NOT NULL DEFAULT '0',
+	`created` TIMESTAMP NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `id` (`id`, `lab`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+DROP TABLE IF EXISTS `drug_seller`;
+
+CREATE TABLE `drug_seller` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`blip` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`entry` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`model` VARCHAR(50) NOT NULL COLLATE 'utf8mb3_general_ci',
+	`time` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`knock` TINYINT(1) NOT NULL DEFAULT '0',
+	`itemListId` VARCHAR(50) NOT NULL COLLATE 'utf8mb3_general_ci',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `name` (`name`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
 ;
 ```
 
@@ -150,26 +210,94 @@ ENGINE=InnoDB
 
 <summary>Database for qbcore</summary>
 
-```sql
-CREATE TABLE IF NOT EXISTS `hospitals` (
+<pre class="language-sql"><code class="lang-sql"><strong>ALTER TABLE
+</strong>    `players`
+ADD
+    IF NOT EXISTS `inside_lab` VARCHAR(50) NULL DEFAULT NULL;
+
+DROP TABLE IF EXISTS `drug_farm`;
+
+CREATE TABLE `drug_farm` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`creator` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
-	`zone` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`respawnPoint` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`blip` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`duty` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`stash` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`boss` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`checkIn` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`wardrobe` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`shop` LONGTEXT NOT NULL COLLATE 'utf8mb3_general_ci',
-	`garage` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
-	PRIMARY KEY (`id`) USING BTREE
+	`name` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(80) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`type` VARCHAR(50) NOT NULL DEFAULT '' COLLATE 'utf8mb3_general_ci',
+	`zone` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`maxCollectionCount` INT(11) NOT NULL DEFAULT '5',
+	`blip` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `name` (`name`) USING BTREE
 )
 COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
+AUTO_INCREMENT=1
 ;
-```
+
+DROP TABLE IF EXISTS `drug_labs`;
+
+CREATE TABLE `drug_labs` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`owner` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`stash` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`wardrobe` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`shell` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`blip` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`price` INT(11) NULL DEFAULT '500',
+	`holders` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`locked` TINYINT(2) NULL DEFAULT '0',
+	`level` INT(11) NULL DEFAULT '1',
+	`progress` INT(11) NULL DEFAULT '0',
+	`public` TINYINT(1) NULL DEFAULT '0',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `name` (`name`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+
+DROP TABLE IF EXISTS `drug_lab_decorations`;
+
+CREATE TABLE `drug_lab_decorations` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`lab` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(70) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`modelName` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`coords` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`rotation` TEXT NOT NULL DEFAULT '' COLLATE 'utf8mb3_general_ci',
+	`inStash` TINYINT(1) NOT NULL DEFAULT '0',
+	`created` TIMESTAMP NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `id` (`id`, `lab`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+DROP TABLE IF EXISTS `drug_seller`;
+
+CREATE TABLE `drug_seller` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`creator` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb3_general_ci',
+	`blip` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`entry` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`model` VARCHAR(50) NOT NULL COLLATE 'utf8mb3_general_ci',
+	`time` TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`knock` TINYINT(1) NOT NULL DEFAULT '0',
+	`itemListId` VARCHAR(50) NOT NULL COLLATE 'utf8mb3_general_ci',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `name` (`name`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+</code></pre>
 
 </details>
 
@@ -177,23 +305,29 @@ ENGINE=InnoDB
 
 ***
 
-## Automatic System Detection
+## Weather Sync
+
+{% hint style="success" %}
+You can add or edit the weather systems directly in **client/custom/weather/weather.lua** to customize it according to your server's needs.
+{% endhint %}
+
+For seamless synchronization of weather and time, specific dependencies are required for **ESX** and **QBCore**. Make sure to select and install the appropriate dependency based on the framework your server uses to ensure everything functions correctly.
+
+| Weather                                                              | Framework support                            |
+| -------------------------------------------------------------------- | -------------------------------------------- |
+| [cd\_easytime](https://github.com/dsheedes/cd_easytime)              | Exclusive for ESX, easy to use.              |
+| [qb-weathersync](https://github.com/qbcore-framework/qb-weathersync) | Exclusive for QBCore, easy to use.           |
+| [av\_weather](https://av-scripts.tebex.io/package/5618745)           | Paid, runs on ESX and QBCore, very advanced. |
+
+***
+
+## Stash and Wardrobe&#x20;
 
 {% hint style="success" %}
 This system automatically adapts to your dependencies, please do not touch files.
 {% endhint %}
 
-One of the strengths of **Quasar Hospital Creator** is that it automatically detects the systems your server is running, so you don’t need to manually configure most integrations. When the script starts, it scans your active resources and links itself with the correct dependencies.&#x20;
-
-For example:
-
-* **Frameworks** → Detects if you use **ESX**, **QBCore**, or **QBX**, and configures itself accordingly.
-* **Inventories** → Works with popular systems such as **qs-inventory** or others without requiring edits.
-* **Wardrobes** → Compatible with **qs-appearance**, **qb-clothing**, **codem-appearance**, and many more.
-* **Vehicle Keys** → Supports different car key systems automatically, from **qs-vehiclekeys** or others.
-* **Fuel Systems** → Recognizes resources like **qs-fuelstations**, **LegacyFuel**, **ox\_fuel**, etc.
-* **Society/Job Management** → Adapts to **esx\_society** or **qb-management**.
-* **Phones** → Works seamlessly with **qs-smartphone-pro or others** for distress calls.
+The **stash** and **wardrobe** systems in Quasar Housing are configured automatically, so no additional adjustments are needed. However, if your system is not compatible, you can fully customize these features using the files located in `client/custom/` and `server/custom/`.&#x20;
 
 ***
 

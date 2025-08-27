@@ -1,47 +1,49 @@
-# Last stand system
+# Make Laboratories Public
 
-The **Last Stand system** adds a more immersive experience when players are downed. Instead of instantly dying, players enter a **critical state** where they can still move slowly, crawl, and interact with their surroundings until they are either revived by medics or finished off.
+In **Quasar Drugs Creator**, laboratory owners have the ability to make their laboratories public or private at any time. This feature allows greater flexibility and control over who can access the laboratory. Follow this guide to enable or disable the public status of your laboratory.
 
-This feature creates a realistic survival scenario, giving EMS more time to respond and adding tension to roleplay situations.
-
-{% hint style="warning" %}
-The **Last Stand system** can be **disabled** from the configuration if you prefer a simpler death mechanic. To do this, set `Config.LastStand = false` in your config file.
-{% endhint %}
-
-***
-
-## How It Works
+Before making a laboratory public, ensure you have:
 
 {% stepper %}
 {% step %}
-### Entering Last Stand
-
-* When a player’s health reaches zero, they don’t immediately die.
-* Instead, they collapse into a **wounded state** with a custom death animation.
+#### **Purchased a laboratory** from the in-game store or another acquisition method.
 {% endstep %}
 
 {% step %}
-### Movement While Downed
-
-* Players can crawl across the ground to reach safety or signal for help.
-* Movement is heavily restricted and slower than normal walking.
-{% endstep %}
-
-{% step %}
-### Revival or Execution
-
-* If EMS arrives, they can revive the player using medical tools.
-* If enemies attack while down, the player can be finished off permanently.
+#### **Customized and decorated the laboratory** to your liking.
 {% endstep %}
 {% endstepper %}
 
 ***
 
-## Death Animation
+## Changing the Public Status
 
-The system includes a **custom death animation**:
+To make your laboratory public or private, follow these steps:
 
-* The character **falls to the ground** in a dramatic, realistic motion.
-* Once on the floor, they can **drag themselves slowly** using arms and body weight.
-* The screen applies a **dark red vignette effect**, creating the feeling of fading out.
-* A timer and notification appear on screen, showing how long the player has before respawn or total death.
+{% stepper %}
+{% step %}
+### A**ccess the Laboratory Menu**
+
+* Open the laboratory menu using the `/labMenu` command.
+{% endstep %}
+
+{% step %}
+### T**oggle Public Status**
+
+* Inside the menu, locate the **"Public Status"** button.
+* Click the button to switch between **public** and **private** modes.
+{% endstep %}
+
+{% step %}
+### **Confirmation**
+
+* If set to **public**, any player can access the laboratory.
+* If set to **private**, only the owner and authorized users can enter.
+{% endstep %}
+{% endstepper %}
+
+***
+
+## Who Can Make a Laboratory Public?
+
+Only the **owner of a laboratory** can change its public status. This means that other players cannot modify the accessibility settings unless they own the lab.

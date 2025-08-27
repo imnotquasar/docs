@@ -1,75 +1,107 @@
-# Pain pills system
+# How to add furniture
 
-The **Pain Pills system** provides a way to temporarily reduce pain and the effects of severe injuries. When a pill is taken, a **stackable effect** is applied with a defined **duration** and **level** of strength. It does not heal wounds: it only reduces pain, allowing the player to move and function while awaiting proper treatment or evacuation.
+{% hint style="info" %}
+If you edit this, do so at your own risk, it is long and very advanced code, do not touch it without a developer.
+{% endhint %}
+
+To add new furniture items to Quasar Drugs Creator, you will configure them in the **furniture configuration** in shared/furniture.lua section of your asset. This allows for customization of furniture pieces, including functionality as wardrobes, stashes, or purely decorative items. Here's a step-by-step explanation.
 
 ***
 
-## How It Works
+## Basic Structure
+
+Each furniture entry includes the following:
+
+<table><thead><tr><th width="279">Value</th><th>Description</th></tr></thead><tbody><tr><td><strong>Label</strong></td><td>Name displayed in the UI.</td></tr><tr><td><strong>Image</strong></td><td>Icon used in the UI.</td></tr><tr><td><strong>Object</strong></td><td>In-game prop model for the furniture.</td></tr><tr><td><strong>Type</strong></td><td>Determines functionality (e.g., stash or wardrobe).</td></tr><tr><td><strong>Offset</strong></td><td>Position offset for interactions.</td></tr><tr><td><strong>Stash Settings</strong> (if applicable)</td><td>Maximum weight and slots for storage.</td></tr></tbody></table>
+
+***
+
+## **Example: Adding a Washing Machine**
+
+Below is an example of adding a washing machine with multiple variants.
+
+```lua
+['washingmachine'] = {
+    label = 'Washing Machine',
+    img = './assets/img/decorate/categories/rooms/bathroom/bathroom-washingmachine-blue.svg',
+    navigation = 2,
+    dynamic = true,
+    dynamicIcon = './assets/img/decorate/categories/rooms/bathroom/bathroom-washingmachine-blue.svg',
+    css = {
+        width = 4.5,
+        top = 7.7,
+        left = 2.5,
+    },
+    items = {
+        [1] = {
+            ['img'] = './assets/img/decorate/categories/rooms/bathroom/items/washing/prop_rub_washer_01.png',
+            ['object'] = 'prop_rub_washer_01',
+            ['price'] = 250,
+            ['label'] = 'Broken Washing Machine',
+            ['description'] = 'Old and dirty washing machine, its cheap at least.',
+            ['colorlabel'] = 'Gray',
+            ['colors'] = {},
+            type = 'stash',
+            offset = {
+                x = 0.0,
+                y = 0.0,
+                z = 0.0,
+            },
+            stash = {
+                maxweight = 50000,
+                slots = 3,
+            }
+        },
+        [2] = {
+            ['img'] = './assets/img/decorate/categories/rooms/bathroom/items/washing/prop_washer_02.png',
+            ['object'] = 'prop_washer_02',
+            ['price'] = 400,
+            ['label'] = 'Clear Washing Machine',
+            ['description'] = 'A beautiful washing machine, at a good price and completely new.',
+            ['colorlabel'] = 'White',
+            ['colors'] = {},
+            type = 'stash',
+            offset = {
+                x = 0.0,
+                y = 0.0,
+                z = 0.0,
+            },
+            stash = {
+                maxweight = 50000,
+                slots = 3,
+            }
+        }
+    }
+}
+```
+
+***
+
+## Steps to Add a New Furniture Item
 
 {% stepper %}
 {% step %}
-### Intake
+### **Choose an Object**
 
-When using a valid pill item, an animation plays and a dose is registered with its `label`, `duration` (in seconds), and `level` (strength).
+Use a valid GTA V prop model.
 {% endstep %}
 
 {% step %}
-### Stacking
+### Define Functionality
 
-Multiple pills can **combine their levels and durations**. The system recalculates the **total level** and applies the corresponding effect.
+* For storage: Use `type = 'stash'` with `stash` settings.
+* For wardrobe: Use `type = 'wardrobe'`.
 {% endstep %}
 
 {% step %}
-### Fading
+### Set Visuals
 
-Every second, all active doses lose duration. When a dose reaches 0, it is removed. If no doses remain, the effects are cleared.
+Include an image path and optional CSS for UI customization.
 {% endstep %}
 
 {% step %}
-### Internal State
+### Add to Config
 
-While any doses are active, the player is marked as **under painkillers**; once they expire, the state and effects are automatically removed.
+Place your new entry in the furniture configuration file.
 {% endstep %}
 {% endstepper %}
-
-***
-
-## What It Does and Doesn’t Do
-
-* ✅ **Reduces pain** and allows more normal movement and interaction.
-* ✅ **Can be stacked**: multiple pills add up to increase total level and extend duration.
-* ❌ **Does not heal injuries**: you must still use _Diagnose_ and treat each body part with the correct medical item.
-
-***
-
-## Default Pills
-
-{% hint style="warning" %}
-For **compatibility**, the same items as _wasabi\_ambulance_ are used. If the **total level** exceeds **10**, it **can be fatal**.
-{% endhint %}
-
-| Item       | Name          | Duration (s) | Level |
-| ---------- | ------------- | ------------ | ----- |
-| morphine30 | Morphine 30MG | 120          | 9     |
-| morphine15 | Morphine 15MG | 50           | 5     |
-| perc30     | Percocet 30MG | 60           | 6     |
-| perc10     | Percocet 10MG | 45           | 4     |
-| perc5      | Percocet 5MG  | 30           | 2     |
-| vic10      | Vicodin 10MG  | 40           | 3     |
-| vic5       | Vicodin 5MG   | 20           | 2     |
-
-***
-
-## Usage Tips
-
-* Start with **lower doses** (e.g., `perc5` or `vic5`) and **evaluate** if a stronger dose is required.
-* Avoid combining multiple strong pills in a short period (e.g., `morphine30` + `perc30`) unless absolutely necessary.
-* Remember: pain pills are a **temporary support** to stabilize the patient — they do not replace proper body-part treatments.
-
-***
-
-## Configuration
-
-* Enable/disable the system with `Config.EnablePainPills`.
-* Adjust durations and strength levels inside `Config.PainPills`.
-* Keep the **practical cap** below 10 to avoid accidental overdoses on your server.
