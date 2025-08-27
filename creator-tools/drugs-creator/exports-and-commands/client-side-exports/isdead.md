@@ -26,11 +26,11 @@ You can then use this information to implement conditions.
 ## **Example**
 
 ```lua
-if LocalPlayer.state.dead == "dead" then
-    print("The player is completely dead, block actions here.")
-elseif LocalPlayer.state.dead == "lastStand" then
-    print("The player is in last stand mode, maybe allow help.")
-else
-    print("The player is alive and can interact normally.")
+local state = LocalPlayer.state.dead
+
+if state == 'dead' or state == 'lastStand' then
+    -- block shooting, interactions, animations, etc.
+    DisableAllControlActions(0)
+    -- your custom logic...
 end
 ```
