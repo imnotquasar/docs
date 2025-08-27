@@ -3,159 +3,185 @@
 The images for these items can always be found in a folder named **\[images]** within the previously downloaded package. Make sure to use these images to ensure consistency and a seamless experience for players on your server.
 
 ```lua
-['weed']                        = {
-    ['name'] = 'weed',
-    ['label'] = 'Marijuana',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'weed.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = 'Hey brother, I think this is so natural...'
-},
-
-['weed_packaged']               = {
-    ['name'] = 'weed_packaged',
-    ['label'] = 'Packaged Marijuana',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'weed_packaged.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = 'Hey brother, I think this is so natural...'
-},
-
-['cocaine']                     = {
-    ['name'] = 'cocaine',
-    ['label'] = 'Cocaine',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'cocaine.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = 'The powder of love, who would have thought it would be so addictive?'
-},
-
-['cocaine_cut']                 = {
-    ['name'] = 'cocaine_cut',
-    ['label'] = 'Cut Cocaine',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'cocaine_cut.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = 'The powder of love, who would have thought it would be so addictive?'
-},
-
-['cocaine_packaged']            = {
-    ['name'] = 'cocaine_packaged',
-    ['label'] = 'Packaged Cocaine',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'cocaine_packaged.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = 'The powder of love, who would have thought it would be so addictive?'
-},
-
-['meth']                        = {
-    ['name'] = 'meth',
-    ['label'] = 'Methamphetamine',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'meth.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = "Oh shit brother, that's hard, very hard."
-},
-
-['chemicals']                   = {
-    ['name'] = 'chemicals',
-    ['label'] = 'Chemicals',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'chemicals.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = "Oh shit brother, that's hard, very hard."
-},
-
-['meth_packaged']               = {
-    ['name'] = 'meth_packaged',
-    ['label'] = 'Packaged Methamphetamine',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'meth_packaged.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = "Oh shit brother, that's hard, very hard."
-},
-
-['sorted_money']                = {
-    ['name'] = 'sorted_money',
-    ['label'] = 'Sorted Money',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'sorted_money.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = "Oh shit brother, that's hard, very hard."
-},
-
-['package_money']               = {
-    ['name'] = 'package_money',
-    ['label'] = 'Packaged Money',
-    ['weight'] = 10,
-    ['type'] = 'item',
-    ['image'] = 'package_money.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['description'] = "Oh shit brother, that's hard, very hard."
-},
-
-['police_stormram']             = {
-    ['name'] = 'police_stormram',
-    ['label'] = 'Stormram',
-    ['weight'] = 18000,
-    ['type'] = 'item',
-    ['image'] = 'police_stormram.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['combinable'] = nil,
-    ['rare'] = 'legendary', -- epic, legendary, common
-    ['description'] = 'A nice tool to break into doors'
-},
-
-['lockpick']                    = {
-    ['name'] = 'lockpick',
-    ['label'] = 'Lockpick',
-    ['weight'] = 300,
-    ['type'] = 'item',
-    ['image'] = 'lockpick.png',
-    ['unique'] = false,
-    ['useable'] = true,
-    ['shouldClose'] = true,
-    ['description'] = 'Very useful if you lose your keys a lot.. or if you want to use it for something else...'
-},
+    -- QS Ambulance
+    ["medikit"] = {
+        ["name"] = "medikit",
+        ["label"] = "Medikit",
+        ["weight"] = 2500,
+        ["type"] = "item",
+        ["image"] = "medikit.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "You can use this medikit to treat your patients"
+    },
+    ["medbag"] = {
+        ["name"] = "medbag",
+        ["label"] = "Medical Bag",
+        ["weight"] = 2500,
+        ["type"] = "item",
+        ["image"] = "medbag.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A bag of medic tools"
+    },
+    ["tweezers"] = {
+        ["name"] = "tweezers",
+        ["label"] = "Tweezers",
+        ["weight"] = 50,
+        ["type"] = "item",
+        ["image"] = "tweezers.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "For picking out bullets"
+    },
+    ["suturekit"] = {
+        ["name"] = "suturekit",
+        ["label"] = "Suture Kit",
+        ["weight"] = 60,
+        ["type"] = "item",
+        ["image"] = "suturekit.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "For stitching your patients"
+    },
+    ["icepack"] = {
+        ["name"] = "icepack",
+        ["label"] = "Ice Pack",
+        ["weight"] = 110,
+        ["type"] = "item",
+        ["image"] = "icepack.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "To help reduce swelling"
+    },
+    ["burncream"] = {
+        ["name"] = "burncream",
+        ["label"] = "Burn Cream",
+        ["weight"] = 125,
+        ["type"] = "item",
+        ["image"] = "burncream.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "To help with burns"
+    },
+    ["defib"] = {
+        ["name"] = "defib",
+        ["label"] = "Defibrillator",
+        ["weight"] = 1120,
+        ["type"] = "item",
+        ["image"] = "defib.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "Used to revive patients"
+    },
+    ["sedative"] = {
+        ["name"] = "sedative",
+        ["label"] = "Sedative",
+        ["weight"] = 20,
+        ["type"] = "item",
+        ["image"] = "sedative.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "If needed, this will sedate patient"
+    },
+    ["morphine30"] = {
+        ["name"] = "morphine30",
+        ["label"] = "Morphine 30MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "morphine30.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
+    ["morphine15"] = {
+        ["name"] = "morphine15",
+        ["label"] = "Morphine 15MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "morphine15.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
+    ["perc30"] = {
+        ["name"] = "perc30",
+        ["label"] = "Percocet 30MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "perc30.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
+    ["perc10"] = {
+        ["name"] = "perc10",
+        ["label"] = "Percocet 10MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "perc10.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
+    ["perc5"] = {
+        ["name"] = "perc5",
+        ["label"] = "Percocet 5MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "perc5.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
+    ["vic10"] = {
+        ["name"] = "vic10",
+        ["label"] = "Vicodin 10MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "vic10.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
+    ["vic5"] = {
+        ["name"] = "vic5",
+        ["label"] = "Vicodin 5MG",
+        ["weight"] = 2,
+        ["type"] = "item",
+        ["image"] = "vic5.png",
+        ["unique"] = false,
+        ["useable"] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = true,
+        ["description"] = "A controlled substance to control pain"
+    },
 ```

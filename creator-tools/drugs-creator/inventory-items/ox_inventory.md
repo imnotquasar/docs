@@ -3,75 +3,93 @@
 The images for these items can always be found in a folder named **\[images]** within the previously downloaded package. Make sure to use these images to ensure consistency and a seamless experience for players on your server.
 
 ```lua
-["weed"] = {
-    label = "Marijuana",
-    weight = 10,
+["medikit"] = {
+    label = "Medikit",
+    weight = 2500,
     stack = true,
 },
 
-["weed_packaged"] = {
-    label = "Packaged Marijuana",
-    weight = 10,
+["medbag"] = {
+    label = "Medical Bag",
+    weight = 2500,
     stack = true,
 },
 
-["cocaine"] = {
-    label = "Cocaine",
-    weight = 10,
+["tweezers"] = {
+    label = "Tweezers",
+    weight = 50,
     stack = true,
 },
 
-["cocaine_cut"] = {
-    label = "Cut Cocaine",
-    weight = 10,
+["suturekit"] = {
+    label = "Suture Kit",
+    weight = 60,
     stack = true,
 },
 
-["cocaine_packaged"] = {
-    label = "Packaged Cocaine",
-    weight = 10,
+["icepack"] = {
+    label = "Ice Pack",
+    weight = 110,
     stack = true,
 },
 
-["meth"] = {
-    label = "Methamphetamine",
-    weight = 10,
+["burncream"] = {
+    label = "Burn Cream",
+    weight = 125,
     stack = true,
 },
 
-["chemicals"] = {
-    label = "Chemicals",
-    weight = 10,
+["defib"] = {
+    label = "Defibrillator",
+    weight = 1120,
     stack = true,
 },
 
-["meth_packaged"] = {
-    label = "Packaged Methamphetamine",
-    weight = 10,
+["sedative"] = {
+    label = "Sedative",
+    weight = 20,
     stack = true,
 },
 
-["sorted_money"] = {
-    label = "Sorted Money",
-    weight = 10,
+["morphine30"] = {
+    label = "Morphine 30MG",
+    weight = 2,
     stack = true,
 },
 
-["package_money"] = {
-    label = "Packaged Money",
-    weight = 10,
+["morphine15"] = {
+    label = "Morphine 15MG",
+    weight = 2,
     stack = true,
 },
 
-["police_stormram"] = {
-    label = "Stormram",
-    weight = 18000,
+["perc30"] = {
+    label = "Percocet 30MG",
+    weight = 2,
     stack = true,
 },
 
-["lockpick"] = {
-    label = "Lockpick",
-    weight = 300,
+["perc10"] = {
+    label = "Percocet 10MG",
+    weight = 2,
+    stack = true,
+},
+
+["perc5"] = {
+    label = "Percocet 5MG",
+    weight = 2,
+    stack = true,
+},
+
+["vic10"] = {
+    label = "Vicodin 10MG",
+    weight = 2,
+    stack = true,
+},
+
+["vic5"] = {
+    label = "Vicodin 5MG",
+    weight = 2,
     stack = true,
 },
 ```

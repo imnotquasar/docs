@@ -1,56 +1,56 @@
-# How to create zones
+# How to create hospitals
 
-To create drug zones, you must have administrator privileges on your server. Follow these steps to set up new zones:
+In **Quasar Hospital Creator**, administrators have the ability to create and manage hospitals directly in-game. This feature provides flexibility for server staff to design and place hospitals without manual database edits. Follow this guide to learn how to open the creation menu and start building hospitals.
+
+Before creating a hospital, ensure you know:
 
 {% stepper %}
 {% step %}
-### **Accessing the Zone Creator Menu**
-
-Use the command `/drugscreator` in the chat. This will open the **Drugs Creator Menu**, which allows you to configure and add zones for drug collection, processing, or packaging.
+**Only administrators** can open the hospital creation menu.
 {% endstep %}
 
 {% step %}
-### **Choosing the Zone Type**
-
-In the menu, you can select the type of zone you want to create:
-
-* **Collection Zone**: For players to gather raw materials (e.g., weed plants, chemicals).
-* **Processing Zone**: For players to process raw materials into usable drugs (e.g., cocaine or methamphetamine).
-* **Packaging Zone**: For players to package processed drugs for sale.
-{% endstep %}
-
-{% step %}
-### **Selecting the Drug Type**
-
-After selecting the zone type, you will choose the specific drug that the zone will handle. For example:
-
-* **Weed**
-* **Meth**
-* **Cocaine**
-* **Heroine** (or any custom drug you’ve added).
-{% endstep %}
-
-{% step %}
-### **Configuring the Zone**
-
-The menu will guide you through configuring the zone, including:
-
-* **Location**: Set the exact position of the zone.
-* **Prop/Model**: Choose the visual object or marker to represent the zone (e.g., a weed plant for collection zones).
-* **Zone Settings**: Define additional requirements like the number of police officers online (if required), timers, and the quantity players can collect or process.
-{% endstep %}
-
-{% step %}
-### **Save and Finalize**
-
-Once you’ve configured the zone, save the settings in the menu. The zone will now be active and ready for players to use.
+The **default hospital** included with the script is **only editable via `config.lua`** and cannot be modified in-game.
 {% endstep %}
 {% endstepper %}
 
 ***
 
-## **Key Notes**
+## Creating a Hospital
 
-* You must be an administrator to access the `/drugscreator` menu and create zones.
-* Ensure the zone type and drug type match your server's configuration to avoid errors.
-* Always test the new zones after creating them to ensure functionality.
+To create a hospital in-game, follow these steps:
+
+{% stepper %}
+{% step %}
+### Access the Hospital Creator Menu
+
+* Use the `/hospital_creator` command as an administrator or Config.CreatorJobs.
+* This will open the creation interface where you can add new hospitals.
+{% endstep %}
+
+{% step %}
+### Customize the Hospital
+
+* Inside the menu, you can define the hospital’s name, location, and layout.
+* Place interaction points such as **healing areas, beds, or NPCs**.
+{% endstep %}
+
+{% step %}
+### Save the Hospital
+
+* Once finished, save your hospital to make it available to players.
+* The new hospital will be added dynamically and does not require a restart.
+{% endstep %}
+{% endstepper %}
+
+***
+
+## Important Notes
+
+⚠️ The **default hospital** that comes with the script cannot be edited in-game. If you need to modify it, changes must be made directly in **`config.lua`**.
+
+***
+
+## Who Can Create Hospitals?
+
+Only **administrators** with access to the `/hospital_creator` command can create and edit hospitals in-game. Regular players cannot use this feature unless permissions are explicitly granted.

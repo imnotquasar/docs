@@ -241,8 +241,8 @@ By integrating the `GiveKeys` export in your scripts, you can enhance the gamepl
 
 Learn more about exports by viewing the following link:
 
-{% content-ref url="exports-and-commands/" %}
-[exports-and-commands](exports-and-commands/)
+{% content-ref url="../../creator-tools/jobs-creator/exports-and-commands/" %}
+[exports-and-commands](../../creator-tools/jobs-creator/exports-and-commands/)
 {% endcontent-ref %}
 
 ***

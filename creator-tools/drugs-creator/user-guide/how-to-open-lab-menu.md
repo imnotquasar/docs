@@ -1,34 +1,79 @@
-# How to open lab menu
+# Ambulance radial menu
 
-To access your laboratory menu, follow these steps:
+In **Quasar Hospital Creator**, medical staff can access a **radial menu** that centralizes all ambulance-related actions in one place. This system ensures fast response times and a more immersive roleplay experience by giving EMS players direct access to the tools they need.
 
-{% stepper %}
-{% step %}
-### **Purchase a Laboratory**
-
-First, you need to buy a laboratory that has already been created. This will serve as your base for processing and managing your drug-related activities.
-{% endstep %}
-
-{% step %}
-### **Enter the Laboratory**
-
-Once you own a laboratory, go to its location and enter it. You can only access the menu while inside your lab.
-{% endstep %}
-
-{% step %}
-### **Open the Menu**
-
-Use one of the following commands to access different features of your laboratory:
-
-* **`/labMenu`**: Opens the main laboratory menu, where you can manage your processing, packaging, and other lab-related tasks.
-* **`/labDeco`**: Opens the decoration mode, allowing you to quickly customize and decorate your laboratory.
-{% endstep %}
-{% endstepper %}
+Whether it’s diagnosing an injury, reviving a patient, or transporting them to safety, the radial menu is designed to make every action intuitive and efficient.
 
 ***
 
-## **Key Notes**
+## How to Open the Radial Menu
 
-* Ensure that you are inside the laboratory to use these commands.
-* The laboratory must be purchased beforehand; you cannot access the menu in unowned labs.
-* The `/labDeco` command is designed for quick decoration and customization of your lab layout.
+To access the ambulance functions, you must first be on duty as an **EMS job**. Once active, you can open the radial menu using your assigned key (by default this is usually `F5`).
+
+After opening, the menu will display all available medical functions in a clear and accessible way.
+
+***
+
+## Functions Explained
+
+Each option in the radial menu represents a specific medical function. Below is a detailed explanation of what each one does:
+
+{% stepper %}
+{% step %}
+### **Diagnose**
+
+Perform a medical check-up on the patient to identify their health status and injuries.
+{% endstep %}
+
+{% step %}
+### **Revive**
+
+Bring unconscious or downed players back to life, typically requiring a **defibrillator**.
+{% endstep %}
+
+{% step %}
+### **Heal**
+
+Treat wounds and restore the patient’s health gradually, often with **medikits** or **burn creams**
+{% endstep %}
+
+{% step %}
+### Sedate
+
+Apply sedatives to calm or immobilize a patient when needed.
+{% endstep %}
+
+{% step %}
+### Put In/Out Vehicle
+
+Safely load or unload a patient from an ambulance or other emergency vehicle.
+{% endstep %}
+
+{% step %}
+### **Bill**
+
+Charge the patient for medical services, ensuring the hospital’s roleplay economy stays balanced.
+{% endstep %}
+
+{% step %}
+### **Dispatch**
+
+Access the dispatch system to manage emergency calls, assign units, and coordinate EMS responses.
+{% endstep %}
+
+{% step %}
+### **Stretcher**
+
+Deploy and interact with a stretcher to transport injured patients realistically.
+{% endstep %}
+
+{% step %}
+### **Wheelchair**
+
+Provide mobility to patients who are unable to walk, increasing immersion and care options.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="warning" %}
+Keep in mind that some actions (such as **Revive**, **Heal**, or **Sedate**) require specific medical items in the inventory (e.g., medikit, sedative, defib). Make sure your EMS team is properly equipped before heading into the field.
+{% endhint %}

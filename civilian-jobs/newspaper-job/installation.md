@@ -157,8 +157,8 @@ In this step, we will add the item `weapon_acidpackage` to your inventory system
 
 Follow the appropriate guide based on the inventory system you're using:
 
-{% content-ref url="inventory-items/" %}
-[inventory-items](inventory-items/)
+{% content-ref url="../../illegal-and-gameplay/gang-wars/inventory-items/" %}
+[inventory-items](../../illegal-and-gameplay/gang-wars/inventory-items/)
 {% endcontent-ref %}
 
 After registering the item, make sure the icon image is present in the appropriate directory (`html/images/items/` or similar), and that it’s correctly listed as a throwable in your config files.
