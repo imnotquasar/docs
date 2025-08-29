@@ -1,12 +1,12 @@
 # Quasar Store Documentation
 
-Welcome to the **Quasar Store** asset documentation! This guide will provide you with all the necessary details to understand, configure, and maximize the use of our exclusive FiveM assets. Before diving into the specifics, here’s a bit about who we are and our journey on the platform. Thank you for being part of the Quasar community!
+Welcome to the [**Quasar Store**](https://www.quasar-store.com/) asset documentation! This guide will provide you with all the necessary details to understand, configure, and maximize the use of our exclusive FiveM assets. Before diving into the specifics, here’s a bit about who we are and our journey on the platform. Thank you for being part of the Quasar community!
 
 ***
 
 ## **About Us**
 
-**Quasar Store** is a premier store dedicated to creating cutting-edge assets for FiveM. Since its establishment, we have become one of the most trusted and well-known names in the FiveM community, thanks to our partnerships with major platforms, including **Tebex**.
+[**Quasar Store**](https://www.quasar-store.com/) is a premier store dedicated to creating cutting-edge assets for FiveM. Since its establishment, we have become one of the most trusted and well-known names in the FiveM community, thanks to our partnerships with major platforms, including **Tebex**.
 
 {% stepper %}
 {% step %}
@@ -34,7 +34,7 @@ Explore the best assets designed to elevate your FiveM server experience.
 
 ## **DMCA Protection**
 
-We take the legitimacy and quality of our products seriously. **Quasar Store** is protected by DMCA licenses, ensuring our assets are legally verified and safeguarded against misuse.
+We take the legitimacy and quality of our products seriously. [**Quasar Store**](https://www.quasar-store.com/) is protected by DMCA licenses, ensuring our assets are legally verified and safeguarded against misuse.
 
 {% stepper %}
 {% step %}
