@@ -6,4 +6,6 @@ The resource **auto-detects your framework** and targeting setup, meaning **no m
 
 Players can engage in a **configurable body-part healing system**, perform **emergency rescues**, and operate with **cooperative EMS missions**. **Hospitals can be created and customized directly in-game**, while **portable medic bags** ensure treatment anywhere in the city. A **fully functional chain of healing, billing, and hospital management** makes this script both **immersive and profitable** — bringing **long-term progression, teamwork, and realism** to your server’s RP.
 
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/hospital)
+
 {% embed url="https://www.youtube.com/watch?v=q6mTVWmE4Z0" %}

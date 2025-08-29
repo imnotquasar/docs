@@ -1,7 +1,11 @@
 # Advanced Garages
 
-Quasar Advanced Garages, is the rewriting of the old Quasar Garages, this asset is a new resource that promises to bring you a LUXURY, EXCLUSIVE, UNIQUE and UNMATCHED system to your server.
+**Quasar Advanced Garages** is a next-generation garage system for FiveM, built from scratch to deliver a premium vehicle management experience. Designed for serious roleplay and modern servers, it combines luxury aesthetics with powerful functionality to give players full control over how they store, manage, and access their vehicles.
 
-Quasar Advanced Garages, is the most anticipated Garage system in FiveM this last 2023, since it includes a large number of features never seen before in FiveM, you can send cars with customizable plates, create garages for sale on the map, give keys to said garage to other players, system of zones based on the ox library, possibility of limited slots in garages so that players can see the inside of public garages and other players' cars and even Housing Garage system with configurable interiors!
+This system introduces groundbreaking features never seen before in FiveM, such as customizable license plates, shared garages between players, configurable interiors, access permissions, and interior teleportation. Garages can be public, private, or job-restricted — with support for persistence, vehicle limits, and immersive roleplay integration.
 
-{% embed url="https://youtu.be/LKCNg2f5zWw" %}
+Everything is modular, intuitive, and optimized for performance, making it ideal for both casual players and advanced server administrators. Whether it’s a luxury condo garage or a faction vehicle depot, Quasar Advanced Garages delivers a polished and highly flexible system for all vehicle storage needs.
+
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/garages)
+
+{% embed url="https://youtu.be/65zWZdchT7E" %}

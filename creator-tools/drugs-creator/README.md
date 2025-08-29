@@ -6,5 +6,7 @@ With Quasar Drugs Creator, server owners can establish specific drug farming zon
 
 The system also provides the ability to create drug buyers as the final step in the production chain, creating a realistic and engaging economy. With its robust customization options and immersive features, Quasar Drugs Creator brings a fresh level of depth and realism to the drug-related gameplay experience.
 
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/drugscreator)
+
 {% embed url="https://www.youtube.com/watch?v=6T93cDMm8t4" %}
 

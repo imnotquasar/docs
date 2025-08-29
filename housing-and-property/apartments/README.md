@@ -1,7 +1,9 @@
 # Apartments
 
-Quasar Apartments redefines housing in FiveM with a compact yet powerful system, bringing a mini Quasar Housing experience. Offering full compatibility with qs-multicharacter and qb-multicharacter, it allows players to select their starting apartment, purchase new properties, and relocate across the city seamlessly.
+**Quasar Apartments** redefines housing in FiveM by offering a compact yet immersive living system. Fully compatible with **qs-multicharacter** and **qb-multicharacter**, it lets players choose a starting apartment, purchase new properties, and move across the city with ease. Each apartment includes essential features like stash, wardrobe, and smartphone chargers, ensuring a functional and realistic home setup.
 
-Each apartment comes with essential features, including stash, wardrobe, and smartphone chargers, along with integration with qs-weed for drug cultivation. The highlight of Quasar Apartments is its decoration system, enabling players to fully customize their spaces, making each home feel unique while maintaining a smooth and immersive roleplay experience.
+Designed with immersion in mind, it also supports **qs-weed**, allowing players to cultivate drugs directly inside their apartments. The standout feature is its powerful decoration system, which lets players personalize every detail of their space. Whether you're creating a cozy studio or a stylish hideout, **Quasar Apartments** offers a seamless and engaging housing experience tailored for both casual and serious roleplay servers.
 
-<figure><img src="../../.gitbook/assets/apartments.png" alt=""><figcaption></figcaption></figure>
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/apartments)
+
+{% embed url="https://youtu.be/WNtqmXPskUk" %}

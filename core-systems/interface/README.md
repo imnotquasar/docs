@@ -4,5 +4,7 @@ Give your server a unique touch with Quasar Interface, a fully customizable inte
 
 Make your server stand out with a professional and modern interface!
 
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts)
+
 {% embed url="https://youtu.be/_skdqMFv3rA" %}
 

@@ -1,7 +1,9 @@
 # Backrooms
 
-**Quasar Backroom** is a terrifying and immersive asset where players find themselves on the edge of reality, transported to the eerie and unsettling world of the backrooms. This asset introduces the Backrooms Creepypasta into the FiveM universe, offering an endless maze of terrifying environments for players to explore and escape.
+**Quasar Backroom** immerses players into a surreal and terrifying realm inspired by the eerie lore of the backrooms and the SCP universe. Upon death, players have a configurable chance to be transported into this alternate dimension, where logic fades and unknown horrors await. Strange corridors, unsettling sound design, and unpredictable NPC creatures make every moment tense and immersive.
 
-Once transported to the backrooms, players will face unknown dangers, including NPCs and other creatures. If they manage to survive and escape, they return to the point of their death, or they may fall victim to the terrifying entities lurking within.
+The system includes damage zones, escape mechanics, and dynamic exit portals, allowing server owners to customize how long players remain trapped—or if they ever make it out. Whether used as a punishment system, a horror event, or a hidden realm to discover, **Quasar Backroom** adds a chilling new layer of gameplay that blends fear, mystery, and survival into your FiveM experience.
+
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/backrooms)
 
 {% embed url="https://youtu.be/x49B9EGDy84" %}

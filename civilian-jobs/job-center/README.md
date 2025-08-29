@@ -6,4 +6,6 @@ Compatible with ESX, QBCore, QBox, and standalone setups, it features auto-detec
 
 Managers can access a dedicated boss tablet to handle applications, view chat history, track statuses, and get live alerts on new messages. With GPS integration, grade-based permissions, and multi-job control, Job Center keeps everything organized, immersive, and effortless.
 
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/jobcenter)
+
 {% embed url="https://www.youtube.com/watch?v=gbmnJxPnaRg" %}

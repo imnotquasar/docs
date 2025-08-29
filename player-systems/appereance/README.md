@@ -1,7 +1,11 @@
 # Appereance
 
-The `qs-appearance` is an advanced and fully modular appearance system designed for modern FiveM servers. It replaces outdated systems like `esx_skin` and `skinchanger`, offering a smooth and immersive experience for both players and developers. With full support for clothing stores, barbers, tattoos, plastic surgery, and more, it provides an all-in-one solution for character customization.
+**Quasar Appearance** is the ultimate all-in-one customization system for FiveM. It combines clothing shops, barbershops, tattoo parlors, surgeons, and mask stores into a single, powerful script — perfect for immersive roleplay servers and optimized for full control over every detail of your characters.
 
-It includes dynamic in-game shop creation, individual store inventories, image previews of every clothing item, and compatibility with popular frameworks and multicharacter systems. Everything is highly configurable, optimized for performance, and designed to deliver a premium visual experience from the first login.
+From headgear-clipping prevention to live image capture for clothing items, every feature is designed with ease of use and server performance in mind. Manage stock, arms visibility, and even NPC shops with a simple and intuitive setup.
 
-\[SOON]
+Whether you're creating high-end fashion stores or gritty back-alley tattoo spots, **Quasar Appearance** gives you the tools to do it — with full support for ESX, QBCore, and standalone.
+
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/appearance)
+
+{% embed url="https://youtu.be/Us241ykMAV0" %}

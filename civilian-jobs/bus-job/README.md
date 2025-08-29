@@ -1,9 +1,9 @@
-# Bus Job
+# Bus Driver Job
 
-Quasar Bus Driver Job is the most immersive public transport system for FiveM, delivering a complete career experience for players who want to dominate the streets as top-tier bus drivers.
+**Quasar Bus Driver** is the most immersive and feature-rich public transportation system for FiveM servers. Designed for serious roleplay, it transforms driving a bus into a structured career path, complete with progression, competition, and real rewards.
 
-Choose from multiple route types — city, rural, and express — each with unique stops, timings, and traffic dynamics. Level up with every completed ride thanks to our exclusive Driver XP System, unlocking better buses, bonuses, and perks.
+With a fully customizable route system, players can operate along preset paths or dynamically generated ones. A detailed level system, real-time driver dashboard, and competitive leaderboard with incentives make this more than just a job — it’s a complete experience. Whether managing a transit network or working your way up to the top driver position, **Quasar Bus Driver** adds realism, utility, and long-term engagement to your server's economy and gameplay.
 
-Climb the Global Bus Driver Leaderboard and compete against others to become the most efficient and legendary driver on the server.
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/bus)
 
 {% embed url="https://www.youtube.com/watch?v=3G2yRiaD__Y" %}

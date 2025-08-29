@@ -1,9 +1,11 @@
 # Realistic Gym
 
-**Quasar Job Center** is a next-gen employment hub that redefines how players find work in FiveM. Through a sleek, NPC-based interface, users can explore job categories, view role details, and instantly message employers in real time — all from within your server.
+**Quasar Realistic Gym** is a fully interactive fitness system that lets players train their character's strength and stamina through fun and immersive workouts. From push-ups to bench presses, each exercise features detailed animations and progression mechanics.
 
-Compatible with ESX, QBCore, QBox, and standalone setups, it features auto-detection for easy installation and supports over 25 languages via its integrated localization system. Whether hiring is instant, via chat, or linked externally, the flexibility is yours.
+The system auto-detects your framework and targeting setup, requiring no manual configuration. With support for over 25 languages, it's ready for global deployment out of the box.
 
-Managers can access a dedicated boss tablet to handle applications, view chat history, track statuses, and get live alerts on new messages. With GPS integration, grade-based permissions, and multi-job control, Job Center keeps everything organized, immersive, and effortless.
+Players can access a full gym experience with bodyweight and weight training stations, all tied to a configurable stat system. Daily stat decay, a membership-based entry system with NPC reception, and visual stat tracking make this gym both realistic and rewarding — adding long-term progression to your server’s RP.
+
+[You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/gym)
 
 {% embed url="https://www.youtube.com/watch?v=tTrBZQ3WNqM" %}
