@@ -590,6 +590,7 @@
     * [Pain pills system](creator-tools/hospital-creator/user-guide/how-to-add-furniture.md)
     * [Bandage healing system](creator-tools/hospital-creator/user-guide/how-to-add-more-shells.md)
     * [Bleeding system](creator-tools/hospital-creator/user-guide/how-to-add-more-shells-1.md)
+    * [Sedative system](creator-tools/hospital-creator/user-guide/how-to-add-more-shells-2.md)
   * [Inventory items](creator-tools/hospital-creator/inventory-items/README.md)
     * [qs-inventory](creator-tools/hospital-creator/inventory-items/qs-inventory.md)
     * [esx\_inventory](creator-tools/hospital-creator/inventory-items/esx_inventory.md)
