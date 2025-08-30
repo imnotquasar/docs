@@ -18,5 +18,6 @@ INSERT INTO `items` (`name`, `label`, `weight`) VALUES
     ('perc10', 'Percocet 10MG', 2),
     ('perc5', 'Percocet 5MG', 2),
     ('vic10', 'Vicodin 10MG', 2),
-    ('vic5', 'Vicodin 5MG', 2);
+    ('vic5', 'Vicodin 5MG', 2),
+    ('stretcher', 'Stretcher', 1500);
 ```

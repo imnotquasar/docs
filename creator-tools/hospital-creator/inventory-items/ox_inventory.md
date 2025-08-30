@@ -92,4 +92,10 @@ The images for these items can always be found in a folder named **\[images]** w
     weight = 2,
     stack = true,
 },
+
+["stretcher"] = {
+    label = "Stretcher",
+    weight = 1500,
+    stack = false,
+},
 ```
