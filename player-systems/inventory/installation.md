@@ -249,7 +249,7 @@ If your framework is not the most recent version, please [look for your version]
 {% step %}
 ### ESX
 
-{% embed url="https://github.com/quasar-store-organizations/es_extended_1.13.2" %}
+{% embed url="https://github.com/quasar-store-organizations/es_extended_1.12.4" %}
 {% endstep %}
 
 {% step %}
