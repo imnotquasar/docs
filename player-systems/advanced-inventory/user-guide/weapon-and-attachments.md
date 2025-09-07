@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Weapon and Attachments
 
 {% hint style="danger" %}
