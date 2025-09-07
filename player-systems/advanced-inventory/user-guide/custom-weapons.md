@@ -10,6 +10,8 @@ Everything else (config, components, images) is the same.
 
 As an example, we used [https://github.com/NoobySloth/Custom-Weapons](https://github.com/NoobySloth/Custom-Weapons).
 
+{% embed url="https://youtu.be/1IEDBf9Kj0w?list=PLU9c-BCMnvA7LlzYnmxRAoKmYg0bhprRO" %}
+
 ***
 
 ## Define the weapon in your inventory config <a href="#modifications-to-esx_identify" id="modifications-to-esx_identify"></a>
