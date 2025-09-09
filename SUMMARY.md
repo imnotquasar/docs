@@ -181,7 +181,7 @@
       * [getCall](player-systems/smartphone-pro/exports-and-commands/client-side-exports/getcall.md)
       * [endCall](player-systems/smartphone-pro/exports-and-commands/client-side-exports/endcall.md)
       * [isInCall](player-systems/smartphone-pro/exports-and-commands/client-side-exports/isincall.md)
-      * [setSOS](player-systems/smartphone-pro/exports-and-commands/client-side-exports/isincall-1.md)
+      * [setSOS](player-systems/smartphone-pro/exports-and-commands/client-side-exports/setsos.md)
     * [Server-side exports](player-systems/smartphone-pro/exports-and-commands/server-side-exports/README.md)
       * [getPhoneNames](player-systems/smartphone-pro/exports-and-commands/server-side-exports/getphonenames.md)
       * [GetPhoneNumberFromIdentifier](player-systems/smartphone-pro/exports-and-commands/server-side-exports/getphonenumberfromidentifier.md)
