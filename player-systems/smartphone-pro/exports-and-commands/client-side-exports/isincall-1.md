@@ -18,7 +18,7 @@ This example disables the SOS system while the player is in a deathmatch.
 
 #### Example with integration
 
-<pre class="language-lua"><code class="lang-lua"><strong>-- in deathmatch event
+<pre class="language-lua"><code class="lang-lua"><strong>-- In deathmatch event
 </strong><strong>TriggerEvent('deathmatch:inDeathmatch', true)
 </strong>if GetResourceState('qs-smartphone-pro'):find('started') then
     exports['qs-smartphone-pro']:setSOS(false)
