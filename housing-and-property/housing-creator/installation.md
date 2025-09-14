@@ -1,5 +1,11 @@
 # Installation
 
+{% hint style="success" %}
+We would like to give a special thanks to **SubhaMPro** for the collaboration in creating the new custom shells that are now part of _Housing Creator_. Thanks to their work, we can offer more modern, immersive, and high-quality interiors for all FiveM servers.
+
+If you want to explore more of their creations, we invite you to visit their official store: [https://subhampro.tebex.io/](https://subhampro.tebex.io/?utm_source=chatgpt.com) where you’ll find a wide catalog of unique shells and innovative resources to take your server to the next level.
+{% endhint %}
+
 ## Script Download
 
 Before starting, you must log in to the CFX portal to download the asset. You will be able to download it as many times as you want on the official CFX page. Just as you download it the first time, you will also download it multiple times in the future to get updates.
@@ -33,10 +39,6 @@ Remember, if you encounter any issues or errors when starting the asset, you can
 The dependencies for this asset are mandatory, so please follow the dependency guide completely and use all required files.
 
 When downloading a dependency, ensure the file is properly unzipped and does not include **"-main"** at the end of its name. If it does, please remove it.
-
-{% hint style="warning" %}
-If you are a qbcore user, remove qb-interior or use only qb-interior, not the k4mb1 package, not use both.
-{% endhint %}
 
 {% stepper %}
 {% step %}
@@ -98,7 +100,7 @@ You can see the complete guide to update your server here:
 ## Server.cfg Positioning
 
 {% hint style="info" %}
-**K4MB1 Maps (shells)** are now in the "Housing \[props]" asset in your keymaster.
+**SubhaMPro (shells)** are now in the "Housing \[props]" asset in your keymaster.
 {% endhint %}
 
 For best results, place dependencies and **qs-housing** in the same `[housing]` folder. If not, ensure dependencies are started before **qs-housing** to guarantee proper functionality. This script should always be started under your inventory system.
