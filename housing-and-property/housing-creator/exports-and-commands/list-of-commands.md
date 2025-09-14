@@ -2,7 +2,7 @@
 
 Each command has its explanation on the right side, if any command does not work, you can check if you used its syntax correctly, you can later claim it in a ticket.
 
-<table><thead><tr><th width="342">Command</th><th>Description</th></tr></thead><tbody><tr><td>/houseMenu</td><td>Open the menu of your own home.</td></tr><tr><td>/hireRenter</td><td>For admin only, kick out a tenant.</td></tr><tr><td>/realestate</td><td>Open the real estate menu.</td></tr></tbody></table>
+<table><thead><tr><th width="342">Command</th><th>Description</th></tr></thead><tbody><tr><td>/houseMenu</td><td>Open the menu of your own home.</td></tr><tr><td>/hireRenter</td><td>For admin only, kick out a tenant.</td></tr><tr><td>/realestate</td><td>Open the real estate menu.</td></tr><tr><td>/resetentrycoords</td><td>Reset all interior door coords.</td></tr></tbody></table>
 
 ***
 
