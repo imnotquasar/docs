@@ -173,11 +173,12 @@ INSERT INTO `jobs` (`name`, `label`, `whitelisted`) VALUES
 ('realestate', 'Real Estate Agency', 1);
 
 
-INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`) VALUES
-('realestate', 0, 'agent', 'Agent', 400),
-('realestate', 1, 'senior_agent', 'Senior Agent', 600),
-('realestate', 2, 'manager', 'Manager', 800),
-('realestate', 3, 'boss', 'Boss', 1000);
+INSERT INTO `job_grades` (`job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
+('realestate', 0, 'agent', 'Agent', 400, '{}', '{}'),
+('realestate', 1, 'senior_agent', 'Senior Agent', 600, '{}', '{}'),
+('realestate', 2, 'manager', 'Manager', 800, '{}', '{}'),
+('realestate', 3, 'boss', 'Boss', 1000, '{}', '{}');
+
 
 INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
 ('society_realestate', 'Real Estate Society', 1);
@@ -244,8 +245,6 @@ COLLATE='utf8mb4_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=3
 ;
-
-
 
 CREATE TABLE IF NOT EXISTS `house_rents` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -348,7 +347,6 @@ COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=1
 ;
-
 ```
 
 </details>
