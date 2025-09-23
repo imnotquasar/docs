@@ -28,7 +28,8 @@ end)
 
 ## Parameters
 
-* **source**: The player's source ID (integer).
+
+
 * **item**: The item name being removed (string).
 * **amount**: The quantity of the item being removed (integer).
 * **totalAmount**: The total quantity of the item remaining in the inventory after the removal (integer).

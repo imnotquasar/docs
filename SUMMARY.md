@@ -482,6 +482,7 @@
     * [List of commands](housing-and-property/apartments/exports-and-commands/list-of-commands.md)
     * [Client-side exports](housing-and-property/apartments/exports-and-commands/client-side-exports/README.md)
       * [inDecorate](housing-and-property/apartments/exports-and-commands/client-side-exports/indecorate.md)
+      * [inApartment](housing-and-property/apartments/exports-and-commands/client-side-exports/inapartment.md)
       * [GetApartments](housing-and-property/apartments/exports-and-commands/client-side-exports/getapartments.md)
 * [Motels Creator](housing-and-property/motels-creator/README.md)
   * [Installation](housing-and-property/motels-creator/installation.md)
@@ -657,6 +658,7 @@
     * [Client-side exports](creator-tools/motorhome-creator/exports-and-commands/client-side-exports/README.md)
       * [GetCurrentVanPlate](creator-tools/motorhome-creator/exports-and-commands/client-side-exports/getcurrentvanplate.md)
       * [inDecorate](creator-tools/motorhome-creator/exports-and-commands/client-side-exports/indecorate.md)
+      * [getClosestVan](creator-tools/motorhome-creator/exports-and-commands/client-side-exports/getclosestvan.md)
 
 ## Civilian Jobs
 
