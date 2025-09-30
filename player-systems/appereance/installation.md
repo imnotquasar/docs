@@ -341,3 +341,28 @@ If you're using **`qb-clothing`**, **`esx_skin`**, or **`fivem-appearance`**, yo
 {% content-ref url="skin-migration-system.md" %}
 [skin-migration-system.md](skin-migration-system.md)
 {% endcontent-ref %}
+
+***
+
+## Saving Clothing Images & Token
+
+When you finish generating and saving clothing images, you **must disable** the option:
+
+```lua
+Config.ImageSaver.enable = false
+```
+
+If you leave it enabled, your **FiveManage token** could be exposed and players may steal it.
+
+Your token must be placed here:
+
+```lua
+-- qs-appearance/config/fivemanage.lua  
+Config.FiveManageToken = "your_token_here"
+```
+
+Always make sure to keep your token private and disable the image saver once the process is complete. If you want to know more, continue here:
+
+{% content-ref url="user-guide/add-new-clothing-and-images.md" %}
+[add-new-clothing-and-images.md](user-guide/add-new-clothing-and-images.md)
+{% endcontent-ref %}

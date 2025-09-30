@@ -26,4 +26,26 @@ Once executed, the system will begin capturing images of **all clothing items**,
 
 ## No Server Storage Required
 
-All generated images are **hosted externally by Quasar Store**, so this feature does **not consume any storage or bandwidth from your server**. Everything is stored and served through our CDN, keeping performance high and maintenance minimal.
+All generated images are **hosted externally by Quasar Store through FiveManage.com**, so this feature **only uses your FiveManage token** for image saving.\
+This means it does **not consume any storage or bandwidth from your server**. Everything is stored and served securely through our CDN, keeping performance high and maintenance minimal.
+
+***
+
+## How to use Fivemanage token
+
+When you finish generating and saving clothing images, you **must disable** the option:
+
+```lua
+Config.ImageSaver.enable = false
+```
+
+If you leave it enabled, your **FiveManage token** could be exposed and players may steal it.
+
+Your token must be placed here:
+
+```lua
+-- qs-appearance/config/fivemanage.lua  
+Config.FiveManageToken = "your_token_here"
+```
+
+Always make sure to keep your token private and disable the image saver once the process is complete.

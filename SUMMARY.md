@@ -354,7 +354,7 @@
     * [Client-side exports](player-systems/fuel-stations/exports-and-commands/client-side-exports/README.md)
       * [SetFuel](player-systems/fuel-stations/exports-and-commands/client-side-exports/setfuel.md)
       * [GetFuel](player-systems/fuel-stations/exports-and-commands/client-side-exports/getfuel.md)
-* [Appereance](player-systems/appereance/README.md)
+* [Appearance](player-systems/appereance/README.md)
   * [Installation](player-systems/appereance/installation.md)
   * [User guide](player-systems/appereance/user-guide/README.md)
     * [Edit Store Stock](player-systems/appereance/user-guide/edit-store-stock.md)
