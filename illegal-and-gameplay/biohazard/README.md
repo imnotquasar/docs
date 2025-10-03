@@ -4,4 +4,4 @@ Quasar Biohazard is a standalone zombie survival event for your FiveM server. On
 
 [You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/backrooms)
 
-{% embed url="https://youtu.be/npy8iGo1ksQ" %}
+{% embed url="https://www.youtube.com/watch?v=npy8iGo1ksQ" %}
