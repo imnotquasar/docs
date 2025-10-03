@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # NPC Interact
 
 **Quasar Interact** is an advanced interaction system for FiveM that redefines how players engage with NPCs, objects, and other players. Forget basic menus — this system offers immersive, context-aware interactions with smooth animations and logic that adapts to every scenario. From picking up items to arresting NPCs or opening doors, every action feels natural and fluid.
