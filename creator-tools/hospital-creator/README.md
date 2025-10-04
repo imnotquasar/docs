@@ -8,4 +8,4 @@ Players can engage in a **configurable body-part healing system**, perform **eme
 
 [You can purchase the asset in the Quasar Store!](https://www.quasar-store.com/scripts/hospital)
 
-<figure><img src="../../.gitbook/assets/hospital_1.00_01_00_30.Imagen fija008.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/medical.png" alt=""><figcaption></figcaption></figure>
