@@ -3,39 +3,27 @@
 The images for these items can always be found in a folder named **\[images]** within the previously downloaded package. Make sure to use these images to ensure consistency and a seamless experience for players on your server.
 
 ```lua
-["medikit"] = {
-    label = "Medikit",
-    weight = 800,
+["adrenaline"] = {
+    label = "Adrenaline Injector",
+    weight = 50,
     stack = true,
 },
 
-["medbag"] = {
-    label = "Medical Bag",
-    weight = 1200,
+["antibiotic"] = {
+    label = "Antibiotic Pills",
+    weight = 20,
     stack = true,
 },
 
-["tweezers"] = {
-    label = "Tweezers",
-    weight = 100,
-    stack = true,
-},
-
-["suturekit"] = {
-    label = "Suture Kit",
-    weight = 300,
-    stack = true,
-},
-
-["icepack"] = {
-    label = "Ice Pack",
-    weight = 200,
+["burn_gel"] = {
+    label = "Burn Gel",
+    weight = 30,
     stack = true,
 },
 
 ["burncream"] = {
     label = "Burn Cream",
-    weight = 150,
+    weight = 40,
     stack = true,
 },
 
@@ -45,51 +33,57 @@ The images for these items can always be found in a folder named **\[images]** w
     stack = false,
 },
 
+["epinephrine"] = {
+    label = "Epinephrine Shot",
+    weight = 40,
+    stack = true,
+},
+
+["hemostatic_agent"] = {
+    label = "Hemostatic Agent",
+    weight = 25,
+    stack = true,
+},
+
+["icepack"] = {
+    label = "Ice Pack",
+    weight = 150,
+    stack = true,
+},
+
+["medbag"] = {
+    label = "Medical Bag",
+    weight = 1200,
+    stack = false,
+},
+
+["medikit"] = {
+    label = "First Aid Kit",
+    weight = 800,
+    stack = true,
+},
+
+["morphine"] = {
+    label = "Morphine Syringe",
+    weight = 35,
+    stack = true,
+},
+
+["painkiller"] = {
+    label = "Painkillers",
+    weight = 25,
+    stack = true,
+},
+
 ["sedative"] = {
-    label = "Sedative",
-    weight = 5,
+    label = "Sedative Syringe",
+    weight = 30,
     stack = true,
 },
 
-["morphine_30mg"] = {
-    label = "Morphine 30MG",
-    weight = 5,
-    stack = true,
-},
-
-["morphine_15mg"] = {
-    label = "Morphine 15MG",
-    weight = 5,
-    stack = true,
-},
-
-["percocet_30mg"] = {
-    label = "Percocet 30MG",
-    weight = 5,
-    stack = true,
-},
-
-["percocet_15mg"] = {
-    label = "Percocet 15MG",
-    weight = 5,
-    stack = true,
-},
-
-["percocet_5mg"] = {
-    label = "Percocet 5MG",
-    weight = 5,
-    stack = true,
-},
-
-["vicodin_10mg"] = {
-    label = "Vicodin 10MG",
-    weight = 5,
-    stack = true,
-},
-
-["vicodin_5mg"] = {
-    label = "Vicodin 5MG",
-    weight = 5,
+["self_sedative"] = {
+    label = "Liquid Sedative",
+    weight = 30,
     stack = true,
 },
 
@@ -98,4 +92,17 @@ The images for these items can always be found in a folder named **\[images]** w
     weight = 1500,
     stack = false,
 },
+
+["suturekit"] = {
+    label = "Suture Kit",
+    weight = 300,
+    stack = true,
+},
+
+["tweezers"] = {
+    label = "Tweezers",
+    weight = 100,
+    stack = true,
+},
+
 ```

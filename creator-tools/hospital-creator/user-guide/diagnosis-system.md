@@ -28,32 +28,20 @@ To treat the patient, drag the correct medical item from your inventory to the a
 
 ## **Testing and Verification**
 
-{% stepper %}
-{% step %}
-### **Tweezers**
+#### **1. Tweezers**
 
-* Used for **gunshot wounds**.
-* Allows you to remove bullets lodged in the patient’s body.
-{% endstep %}
+* Used for **bleeding wounds**.
+* Allows medics to remove debris or bullets lodged in the patient’s body.
+* Essential tool for trauma care and deep wound cleaning.
 
-{% step %}
-### Suture Kit
+#### **2. Ice Pack**
 
-* Used for **stab wounds**.
-* Helps stitch deep cuts and prevent further bleeding.
-{% endstep %}
+* Used for **bruising injuries**.
+* Reduces swelling and soothes pain caused by blunt impacts.
+* Ideal for beat wounds and muscle inflammation.
 
-{% step %}
-### Ice Pack
-
-* Used for **beat wounds**.
-* Reduces swelling and treats bruising caused by blunt trauma.
-{% endstep %}
-
-{% step %}
-### Burn Cream
+#### **3. Burn Cream**
 
 * Used for **burn wounds**.
-* Provides relief and healing for patients suffering from burns.
-{% endstep %}
-{% endstepper %}
+* Provides immediate relief and accelerates skin regeneration.
+* Prevents infection and reduces long-term scarring.

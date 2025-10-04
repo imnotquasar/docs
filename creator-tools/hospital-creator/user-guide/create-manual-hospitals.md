@@ -21,138 +21,94 @@ Drop this in your config. Every line is commented so you know exactly what each 
 ---@type ConfigHospital[]
 Config.Hospitals = {
     {
-        -- Unique identifier used internally (no spaces).
         id = 'pillbox',
-
-        -- (Optional) Zone info used to detect you're inside hospital area.
         zone = {
-            -- Center of the hospital zone (x, y, z).
-            coords = vec3(320.0405, -591.7145, 43.2918),
+            coords = vec3(320.04052734375, -591.7145385742188, 43.29180526733398),
+            size = vec3(120.0),
         },
-
-        -- General reference coords for this hospital (also used by zone helpers).
-        coords = vec3(320.0405, -591.7145, 43.2918),
-
-        -- Size of the zone box (x, y, z). Too small = drawtexts may not show; too big = shows too far.
-        size = vec3(120.0),
-
-        -- Main respawn configuration.
+        coords = vec3(320.04052734375, -591.7145385742188, 43.29180526733398), -- General hospital coords. Using for zone.
         respawnPoint = {
-            -- Where players respawn when revived/processed (x, y, z, heading).
-            coords = vec4(315.4651, -583.1114, 43.2817, 246.7842),
-
-            -- true = use Check-In flow instead of hard respawn point when possible.
+            coords = vec4(315.4651489257813, -583.1113891601562, 43.28171920776367, 246.7841949462891),
             useCheckInInstead = true
         },
-
-        -- Map blip settings for the hospital.
         blip = {
-            enable = true,                                -- Show a blip on the map.
-            coords = vec3(320.0405, -591.7145, 43.2918), -- Blip position.
-            sprite = 61,                                  -- Blip icon (GTA sprite ID).
-            color  = 2,                                   -- Blip color ID.
-            scale  = 1.0,                                 -- Blip size.
-            label  = 'Pillbox Hospital'                   -- Blip name.
+            enable = true,
+            coords = vec3(320.04052734375, -591.7145385742188, 43.29180526733398),
+            sprite = 61,
+            color = 2,
+            scale = 1.0,
+            label = 'Pillbox Hospital'
         },
-
-        -- Duty point for EMS (toggle on/off duty).
         duty = {
-            enable = true,                                -- Enable this duty point.
-            coords = vec3(305.3186, -597.4736, 43.2918),  -- Interaction coords.
-            distance = 3.0                                -- Max distance to interact.
-        },
-
-        -- Stash point (shared storage for EMS).
-        stash = {
             enable = true,
-            coords = vec3(310.1644, -599.5598, 43.2918),
-            distance = 2.0
-        },
-
-        -- Boss menu (grades/management).
-        boss = {
-            enable = true,
-            coords = vec3(309.9211, -602.9509, 43.2918),
+            coords = vec3(305.3186340332031, -597.4736328125, 43.29183959960937),
             distance = 3.0
         },
-
-        -- Check-In system (NPC + beds + costs + timers).
+        stash = {
+            enable = true,
+            coords = vec3(310.1644287109375, -599.5597534179688, 43.29182434082031),
+            distance = 2.0
+        },
+        boss = {
+            enable = true,
+            coords = vec3(309.921142578125, -602.950927734375, 43.29182434082031),
+            distance = 3.0
+        },
         checkIn = {
-            enable = true,                                -- Turn the system on/off.
-            ped = 's_m_m_doctor_01',                      -- Ped model for the receptionist.
-            -- Z lowered by 1.0 to align ped with floor if needed; adjust to your map.
-            coords = vec4(307.9655, -588.1100, 43.2918 - 1.0, 155.0590),
-
-            distance = 50.0,                              -- 3D text / target visibility distance.
-            cost = 3000,                                  -- Money cost to check in (set false for free).
-            duration = 15 * 1000,                         -- Bed time in milliseconds (15s here).
-            maxOnDuty = 3,                                -- If >0, check-in is allowed only when EMS on duty ≤ this.
-            disableHospitalBeds = false,                  -- true = skip beds; respawn uses respawnNoBedCoords.
-            respawnNoBedCoords = vec4(316.66, -581.30, 43.28, 339.02), -- Fallback respawn if beds disabled.
-
-            -- Bed list: each bed has x, y, z, heading. Add as many as your interior needs.
+            enable = true,
+            ped = 's_m_m_doctor_01',
+            coords = vec4(307.9654846191406, -588.1099853515625, 43.2918472290039 - 1.0, 155.0590362548828),
+            distance = 50.0,
+            cost = 3000,
+            duration = 15 * 1000,
+            maxOnDuty = 3,
+            disableHospitalBeds = false,
+            respawnNoBedCoords = vec4(316.66, -581.3, 43.28, 339.02),
             beds = {
-                vec4(333.9829, -578.4377, 42.8646, 70.0),
-                vec4(326.9050, -576.3430, 42.8772 + 0.3, 340.0), -- +0.3 raises Z slightly to avoid clipping.
-                vec4(344.7037, -581.0491, 42.8719, 70.0),
-                vec4(349.4271, -583.5142, 42.8719, 340.0)
+                vec4(333.98287963867, -578.43774414062, 42.864631652832, 70.000022888184),
+                vec4(326.90502929688, -576.34295654297, 42.877216339111 + 0.3, 340.00003051758),
+                vec4(344.70373535156, -581.04907226562, 42.871894836426, 70.000022888184),
+                vec4(349.42709350586, -583.51416015625, 42.871894836426, 340.00003051758)
             }
         },
-
-        -- Wardrobe/locker room for uniforms.
         wardrobe = {
             enable = true,
-            coords = vec4(298.7800, -599.7715, 43.2921, 341.15),
+            coords = vec4(298.780029296875, -599.7715454101562, 43.29206085205078, 341.15),
             distance = 3.0,
         },
-
-        -- Shop: supported by qs-inventory, qb-inventory and ps-inventory.
-        -- For other inventories, add/replicate items in their native store systems.
+        -- Shop only supporting in qs, qb and ps-inventory. For other inventories you can add them to the stores inside them. Each inventory has its own store.
         shop = {
             enable = true,
-            ped = 's_m_m_doctor_01',                      -- Shop NPC model.
-            animationDict = 'mini@strip_club@idles@bouncer@base', -- Optional idle anim dict.
-            animationName = 'base',                       -- Optional idle anim name.
-            -- Z lowered by 1.0 for better ped placement; tweak if your floor is different.
-            coords = vec4(316.6894, -588.1437, 43.2918 - 1.0, 185.0787),
+            ped = 's_m_m_doctor_01',
+            animationDict = 'mini@strip_club@idles@bouncer@base',
+            animationName = 'base',
+            coords = vec4(316.68939208984375, -588.1437377929688, 43.29182434082031 - 1.0, 185.07872009277344),
             distance = 3.0,
-
-            -- Items available for purchase (item name, label, price, description).
-            items = {
-                { name = 'medbag',     label = 'Medical Bag',   price = 1000, description = 'Portable medic kit' },
-                { name = 'medikit',    label = 'First-Aid Kit', price = 250,  description = 'Basic healing kit' },
-                { name = 'morphine30', label = 'Morphine 30MG', price = 100,  description = 'Strong pain relief' },
-                { name = 'morphine10', label = 'Morphine 10MG', price = 45,   description = 'Light pain relief' },
-                { name = 'perc30',     label = 'Percocet 30MG', price = 60,   description = 'High-dose pill' },
-                { name = 'perc10',     label = 'Percocet 10MG', price = 40,   description = 'Medium-dose pill' },
-                { name = 'perc5',      label = 'Percocet 5MG',  price = 30,   description = 'Low-dose pill' },
-                { name = 'vic10',      label = 'Vicodin 10MG',  price = 30,   description = 'Strong painkiller' },
-                { name = 'vic5',       label = 'Vicodin 5MG',   price = 15,   description = 'Mild painkiller' },
-                { name = 'stretcher',  label = 'Stretcher',     price = 1500, description = 'Patient transport' },
-            }
+            items = Config.CreatorDefaultItems
         },
-
-        -- Garage list. You can have multiple garage entries (ground, roof, etc.).
         garage = {
             {
-                -- Where players open the vehicle menu.
-                menuCoords = vec3(295.0178, -600.4273, 43.3034),
+                menuCoords = vec3(295.0177917480469, -600.4273071289062, 43.3034439086914),
                 distance = 5.0,
-
-                -- Where the vehicle actually spawns (x, y, z, heading).
-                spawnCoords = vec4(287.3742, -611.8311, 43.3840, 70.01),
-
-                -- Vehicles available here; restrict by grades if needed.
+                spawnCoords = vec4(287.3741760253906, -611.8311157226562, 43.38404083251953, 70.00999450683594),
                 vehicles = {
-                    { model = 'ambulance', label = 'Ambulance', grades = { 1, 2, 3 } }
+                    {
+                        model = 'ambulance',
+                        label = 'Ambulance',
+                        grades = { 1, 2, 3 },
+                    }
                 }
             },
             {
-                menuCoords = vec3(339.7209, -588.8276, 74.1657),
+                menuCoords = vec3(339.72088623046875, -588.82763671875, 74.16568756103516),
                 distance = 5.0,
-                spawnCoords = vec4(350.1439, -587.9478, 74.1658, 274.9385),
+                spawnCoords = vec4(350.1439208984375, -587.94775390625, 74.16577911376953, 274.9385070800781),
                 vehicles = {
-                    { model = 'polmav', label = 'Maverick', grades = { 1, 2, 3 } }
+                    {
+                        model = 'polmav',
+                        label = 'Maverick',
+                        grades = { 1, 2, 3 },
+                    }
                 }
             }
         }
@@ -173,25 +129,17 @@ Config.EnableStandaloneHospitals = true
 ---@type HospitalInteractionCheckIn[]
 Config.StandaloneHospitals = {
     {
-        id   = 'prison',                                   -- Unique ID.
-        ped  = 's_m_m_scientist_01',                       -- Reception/medic NPC model.
-        coords = vec4(1729.03, 2563.33, 45.56 - 0.9, 181.42), -- NPC position (Z adjusted down 0.9).
-        distance = 5.0,                                    -- TextUI/target visibility range.
-
-        cost = 5,          -- Bank cost to use check-in (set false for free).
-        duration = 5 * 1000, -- Time in bed (ms) before you’re released.
-        account = 'bank',  -- Which account to charge (depends on your economy).
-
-        -- If true, players won’t be placed into beds; fallback respawn coords used instead.
-        disableHospitalBeds = false,
-
-        -- Fallback respawn if beds are disabled or not available.
-        respawnNoBedCoords = vec4(1729.03, 2563.33, 45.56, 339.02),
-
-        -- Bed list for this outpost (usually 1–2 for small clinics).
-        beds = {
-            vec4(1729.03, 2563.33, 45.56, 339.02),
-        }
+        id = 'sandy',
+        ped = 's_m_m_scientist_01',
+        animationDict = 'mini@strip_club@idles@bouncer@base',
+        animationName = 'base',
+        coords = vec4(-1600.72265625, 5204.52587890625, 3.3, 23.65213012695312),
+        distance = 5.0,
+        cost = 5000,
+        duration = 5000,            -- 5 second
+        disableHospitalBeds = true, -- force respawn in respawnNoBedCoords. If you enable this, player will respawn in respawnNoBedCoords.
+        respawnNoBedCoords = vec4(-1598.0526123046875, 5206.6220703125, 4.3100938796997, 295.98626708984375),
+        beds = {}
     },
 }
 ```

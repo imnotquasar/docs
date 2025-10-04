@@ -20,26 +20,26 @@ Config.AmbulanceItems = {
     revive = {
         item = 'defib',
         label = 'Defibrillator',
-        remove = false -- Remove item after use
+        remove = false -- remove item after use
     },
     heal = {
         item = 'medikit',
         label = 'Medikit',
         duration = 1000,
         healBleed = true,
-        remove = true -- Remove item after use
+        remove = true
     },
     sedate = {
         item = 'sedative',
         label = 'Sedative',
-        duration = 8 * 60000, -- Default: 8 minutes
-        remove = true -- Item is consumed after use
+        duration = 8 * 60000,
+        remove = true
     },
     medbag = {
         enable = true,
         item = 'medbag',
         label = 'Med Bag',
-        remove = true -- Remove item after use
+        remove = true
     }
 }
 ```

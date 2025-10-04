@@ -584,17 +584,15 @@
 
 ## Creator Tools
 
-* [Hospital Creator](creator-tools/hospital-creator/README.md)
+* [Medical Creator](creator-tools/hospital-creator/README.md)
   * [Installation](creator-tools/hospital-creator/installation.md)
   * [User guide](creator-tools/hospital-creator/user-guide/README.md)
     * [How to create hospitals](creator-tools/hospital-creator/user-guide/how-to-create-hospitals.md)
     * [Create manual hospitals](creator-tools/hospital-creator/user-guide/create-manual-hospitals.md)
     * [Ambulance radial menu](creator-tools/hospital-creator/user-guide/ambulance-radial-menu.md)
     * [Diagnosis system](creator-tools/hospital-creator/user-guide/diagnosis-system.md)
-    * [Last stand system](creator-tools/hospital-creator/user-guide/last-stand-system.md)
     * [Pain pills system](creator-tools/hospital-creator/user-guide/pain-pills-system.md)
     * [Bandage healing system](creator-tools/hospital-creator/user-guide/bandage-healing-system.md)
-    * [Bleeding system](creator-tools/hospital-creator/user-guide/bleeding-system.md)
     * [Sedative system](creator-tools/hospital-creator/user-guide/sedative-system.md)
   * [Inventory items](creator-tools/hospital-creator/inventory-items/README.md)
     * [qs-inventory](creator-tools/hospital-creator/inventory-items/qs-inventory.md)

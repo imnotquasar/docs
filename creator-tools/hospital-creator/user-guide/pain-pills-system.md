@@ -44,19 +44,116 @@ While any doses are active, the player is marked as **under painkillers**; once 
 
 ## Default Pills
 
-{% hint style="warning" %}
-For **compatibility**, the same items as _wasabi\_ambulance_ are used. If the **total level** exceeds **10**, it **can be fatal**.
-{% endhint %}
+```lua
+Config.MedicalSystem = {
+    enable = true,
+    items = {
+        -- Pain Relief Medications
+        {
+            item = 'painkiller',
+            label = 'Painkiller',
+            duration = 20000,        -- 20 seconds
+            effects = {
+                reduce_bruising = 2, -- Reduces bruising level by 2
+                reduce_burning = 1,  -- Reduces burning level by 1
+                screen_blur = true,  -- Adds slight blur effect
+                movement_slow = 0.9  -- 90% movement speed
+            }
+        },
+        {
+            item = 'morphine',
+            label = 'Morphine',
+            duration = 60000,        -- 60 seconds
+            effects = {
+                reduce_bruising = 4, -- Removes all bruising
+                reduce_burning = 3,  -- Reduces burning significantly
+                reduce_bleeding = 1, -- Slightly reduces bleeding
+                screen_blur = true,
+                screen_distortion = true,
+                movement_slow = 0.7,  -- 70% movement speed
+                weapon_accuracy = 0.5 -- 50% weapon accuracy
+            }
+        },
 
-| Item       | Name          | Duration (s) | Level |
-| ---------- | ------------- | ------------ | ----- |
-| morphine30 | Morphine 30MG | 120          | 9     |
-| morphine15 | Morphine 15MG | 50           | 5     |
-| perc30     | Percocet 30MG | 60           | 6     |
-| perc10     | Percocet 10MG | 45           | 4     |
-| perc5      | Percocet 5MG  | 30           | 2     |
-| vic10      | Vicodin 10MG  | 40           | 3     |
-| vic5       | Vicodin 5MG   | 20           | 2     |
+        {
+            item = 'hemostatic_agent',
+            label = 'Hemostatic Agent',
+            duration = 12000,             -- 12 seconds
+            effects = {
+                reduce_bleeding = 3,      -- Reduces bleeding by 3 levels
+                stop_bleeding_chance = 80 -- 80% chance to stop bleeding completely
+            }
+        },
+
+        -- Burn Treatment
+        {
+            item = 'burn_gel',
+            label = 'Burn Treatment Gel',
+            duration = 24000,          -- 24 seconds
+            effects = {
+                reduce_burning = 2,    -- Reduces burning by 2 levels
+                cooling_effect = true, -- Visual cooling effect
+                pain_reduction = 0.5   -- 50% less burn pain
+            }
+        },
+
+        -- Stimulants
+        {
+            item = 'adrenaline',
+            label = 'Adrenaline Shot',
+            duration = 18000,          -- 18 seconds
+            effects = {
+                movement_boost = 1.3,  -- 130% movement speed
+                weapon_accuracy = 1.2, -- 120% weapon accuracy
+                health_regen = true,   -- Gradual health regeneration
+                screen_shake = true,   -- Adrenaline shake effect
+                heart_rate_increase = true
+            }
+        },
+
+        -- Antibiotics
+        {
+            item = 'antibiotic',
+            label = 'Antibiotic',
+            duration = 90000, -- 90 seconds
+            effects = {
+                prevent_infection = true,
+                slow_healing = true,
+                immunity_boost = 0.2 -- 20% damage resistance
+            }
+        },
+
+        -- Emergency Medications
+        {
+            item = 'epinephrine',
+            label = 'Epinephrine Auto-Injector',
+            duration = 30000,           -- 30 seconds
+            effects = {
+                instant_health = 50,    -- Instant health boost
+                reduce_all_effects = 1, -- Reduces all damage types by 1
+                movement_boost = 1.1,
+                weapon_accuracy = 1.1,
+                screen_flash = true -- Emergency injection flash
+            }
+        },
+
+        -- Sedatives
+        {
+            item = 'self_sedative',
+            label = 'Self Sedative',
+            duration = 45000, -- 45 seconds
+            effects = {
+                reduce_bruising = 3,
+                reduce_burning = 2,
+                movement_slow = 0.6,   -- 60% movement speed
+                weapon_accuracy = 0.3, -- 30% weapon accuracy
+                screen_blur = true,
+                drowsiness = true
+            }
+        }
+    }
+}
+```
 
 ***
 

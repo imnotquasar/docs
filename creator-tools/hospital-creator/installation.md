@@ -183,7 +183,7 @@ ENGINE=InnoDB
 This system automatically adapts to your dependencies, please do not touch files.
 {% endhint %}
 
-One of the strengths of **Quasar Hospital Creator** is that it automatically detects the systems your server is running, so you don’t need to manually configure most integrations. When the script starts, it scans your active resources and links itself with the correct dependencies.&#x20;
+One of the strengths of **Quasar Medical Creator** is that it automatically detects the systems your server is running, so you don’t need to manually configure most integrations. When the script starts, it scans your active resources and links itself with the correct dependencies.&#x20;
 
 For example:
 
