@@ -114,7 +114,7 @@ The images for these items can always be found in a folder named **\[images]** w
     ['type'] = 'item',
     ['image'] = 'medbag.png',
     ['unique'] = true,
-    ['useable'] = false,
+    ['useable'] = true,
     ['shouldClose'] = true,
     ['combinable'] = nil,
     ['description'] = 'Bag used by medics to store medical tools and supplies.'
