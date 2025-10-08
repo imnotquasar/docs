@@ -123,6 +123,7 @@ As there are multiple housing systems in the market, and frameworks like QBCore 
 
 ```sql
 ALTER TABLE `users` ADD IF NOT EXISTS `ems_duty` LONGTEXT NULL DEFAULT NULL;
+ALTER TABLE `users` ADD IF NOT EXISTS `is_dead` TINYINT(1) NULL DEFAULT '0';
 
 CREATE TABLE IF NOT EXISTS `hospitals` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
