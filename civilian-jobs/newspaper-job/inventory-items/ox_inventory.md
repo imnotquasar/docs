@@ -11,7 +11,7 @@ This guide explains how to register a new **throwable item** in `ox_inventory`, 
 Add the following entry to the items list:
 
 ```lua
-luaCopiarEditar['WEAPON_ACIDPACKAGE'] = {
+['WEAPON_ACIDPACKAGE'] = {
     label = 'Newspaper',
     weight = 0,
     throwable = true,
