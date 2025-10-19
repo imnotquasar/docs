@@ -156,6 +156,34 @@ CREATE TABLE IF NOT EXISTS `crafting_tables` (
 COLLATE='utf8mb3_general_ci';
 
 ALTER TABLE `users` ADD IF NOT EXISTS `crafting_skill` LONGTEXT NULL DEFAULT NULL;
+
+DELIMITER $$
+
+CREATE PROCEDURE migrate_crafting_tables()
+BEGIN
+    IF EXISTS (
+        SELECT * FROM INFORMATION_SCHEMA.COLUMNS 
+        WHERE TABLE_NAME = 'crafting_tables' 
+        AND COLUMN_NAME = 'job'
+        AND TABLE_SCHEMA = DATABASE()
+    ) THEN
+        ALTER TABLE `crafting_tables` 
+            DROP COLUMN `job`,
+            DROP COLUMN `grades`,
+            DROP COLUMN `gang`,
+            DROP COLUMN `gangGrades`;
+        
+        ALTER TABLE `crafting_tables`
+            ADD COLUMN `jobs` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+            ADD COLUMN `gangs` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci';
+    END IF;
+END$$
+
+DELIMITER ;
+
+CALL migrate_crafting_tables();
+DROP PROCEDURE IF EXISTS migrate_crafting_tables;
+
 ```
 
 </details>
@@ -202,6 +230,34 @@ COLLATE='utf8mb3_general_ci';
 
 
 ALTER TABLE `players` ADD IF NOT EXISTS `crafting_skill` LONGTEXT NULL DEFAULT NULL;
+
+DELIMITER $$
+
+CREATE PROCEDURE migrate_crafting_tables()
+BEGIN
+    IF EXISTS (
+        SELECT * FROM INFORMATION_SCHEMA.COLUMNS 
+        WHERE TABLE_NAME = 'crafting_tables' 
+        AND COLUMN_NAME = 'job'
+        AND TABLE_SCHEMA = DATABASE()
+    ) THEN
+        ALTER TABLE `crafting_tables` 
+            DROP COLUMN `job`,
+            DROP COLUMN `grades`,
+            DROP COLUMN `gang`,
+            DROP COLUMN `gangGrades`;
+        
+        ALTER TABLE `crafting_tables`
+            ADD COLUMN `jobs` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+            ADD COLUMN `gangs` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci';
+    END IF;
+END$$
+
+DELIMITER ;
+
+CALL migrate_crafting_tables();
+DROP PROCEDURE IF EXISTS migrate_crafting_tables;
+
 ```
 
 </details>
