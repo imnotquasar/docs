@@ -136,8 +136,100 @@ Quasar Jobs Creator sets up the database automatically. If needed, run /sql/\*.s
 
 go to server.cfg and put the add ace command on it
 
-```editorconfig
-#Jobs_Creator
-add_ace identifier.license:yourlicensehere jobcreator allow # Add permission to 'emanu' Rockstar license
+#### FiveM Permissions Guide: Understanding `add_ace`, `add_principal`, and How to Give Admin Access
+
+This is a simple, beginner-friendly guide to managing permissions in FiveM servers. Think of it like running a club: some people are members, some are staff, and certain doors only open if you have the right key.
+
+#### Key Concepts (Easy Explanation)
+
+* **Player (User)**: A specific person joining your server (identified by their FiveM ID, Discord ID, license, etc.).
+* **Group**: Like a "role" or "job title" (e.g., admin, moderator, VIP). Multiple players can be in the same group.
+* **Ace (Permission)**: A "key" that allows access to specific features (e.g., opening the admin menu in a script like qs-police-creator).
+* **Principal**: This is what links a player (or group) to another group.
+
+There are two main commands you’ll use in your `server.cfg`:
+
+1. `add_principal` → Puts a player into a group (gives them a role).
+2. `add_ace` → Gives a "key" (permission) to a group or directly to a player.
+
+**Important**: Putting someone in a group does **not** automatically give them special keys. You often need both steps!
+
+#### Examples
+
+#### Example 1: Give permission to an entire group (Recommended – Clean & Scalable)
+
+You want **all admins** to use the qs-police-creator admin menu.
+
+```cfg
+# Step 1: Add a player to the "admin" group
+add_principal identifier.fivem:1234567 group.admin # PlayerName
+add_principal identifier.discord:123456789012345678 group.admin # PlayerName
+
+# Step 2: Give the special key "qspoliceadmin" to the entire admin group
+add_ace group.admin qspoliceadmin allow
 ```
 
+**Result**:
+
+* The player joins the `admin` group.
+* Everyone in `group.admin` gets the `qspoliceadmin` permission.
+* Any new admin you add later automatically gets it too!
+
+#### Example 2: Give permission directly to one player (No group needed)
+
+Useful for temporary or very specific access.
+
+```cfg
+# Give the key directly to one player only
+add_ace identifier.fivem:1234567 qspoliceadmin allow
+add_ace identifier.discord:123456789012345678 qspoliceadmin allow
+```
+
+**Result**:
+
+* Only this player gets the permission.
+* You’ll need to add new lines for each new person.
+
+#### Example 3: Standard QBCore Setup (Most QBCore servers use this)
+
+QBCore uses special groups like `qbcore.god` for full admins.
+
+```cfg
+# Make someone a full admin (god mode permissions)
+add_principal identifier.fivem:1234567 qbcore.god # PlayerName
+
+# Optional: If a script needs "qspoliceadmin", give it to gods
+add_ace qbcore.god qspoliceadmin allow
+```
+
+**Result**:
+
+* Player gets full admin powers in QBCore.
+* Works with most QBCore scripts out of the box.
+
+#### Example 4: Common Full Admin Setup (Mix of groups and permissions)
+
+```cfg
+## Permissions Section
+
+# Allow admins to use all commands
+add_ace group.admin command allow
+
+# Add player to admin group
+add_principal identifier.fivem:1234567 group.admin # PlayerName
+
+# Give admin group access to qs-police-creator menu
+add_ace group.admin qspoliceadmin allow
+
+# Optional: For QBCore gods (super admins)
+add_principal identifier.fivem:1234567 qbcore.god
+add_ace qbcore.god qspoliceadmin allow
+```
+
+### Tips
+
+* Always **restart the full server** after changing `server.cfg` (not just a resource).
+* Order matters sometimes — put `add_ace` lines **after** `add_principal`.
+* Use groups whenever possible — easier to manage multiple admins.
+
+That’s it! With these basics, you can control who gets admin access on your qs-police-creator script safely and easily.
